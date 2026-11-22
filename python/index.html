@@ -1,0 +1,312 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Udit Baliyan" />
+    <link rel="icon" href="/static/images/favicons/favicon.ico" />
+    
+      
+      <title>Python · PyVerse</title>
+      
+
+
+<meta name="description" content="Longer-form Python notes: the concepts people trip over, with runnable snippets and links to the matching practice track." />
+<link rel="canonical" href="https://pyverse.com/python/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PyVerse" />
+<meta property="og:title" content="Python · PyVerse" />
+<meta property="og:description" content="Longer-form Python notes: the concepts people trip over, with runnable snippets and links to the matching practice track." />
+<meta property="og:url" content="https://pyverse.com/python/" />
+
+<meta name="twitter:card"
+      content="summary" />
+<meta name="twitter:title" content="Python · PyVerse" />
+<meta name="twitter:description" content="Longer-form Python notes: the concepts people trip over, with runnable snippets and links to the matching practice track." />
+
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;700;900&family=Archivo:wdth,wght@62..125,400..900&display=swap"
+          rel="stylesheet" />
+    
+      
+
+<link rel="stylesheet" type="text/css" href="/static/css/dist/styles.css">
+
+      <link href="/static/css/project.css" rel="stylesheet" />
+      <link href="/static/css/pyverse-pop.css" rel="stylesheet" />
+    
+    
+    
+    
+      <script defer
+              src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      <script defer src="/static/js/project.js"></script>
+      <script defer src="/static/js/pyverse-pop.js"></script>
+    
+  </head>
+  <body class="flex min-h-screen flex-col bg-bg font-sans text-base leading-relaxed text-ink "
+        
+        >
+    
+      <a href="#main"
+         class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-(--z-toast) focus:border-[3px] focus:border-ink focus:bg-bg focus:px-4 focus:py-3 focus:font-mono focus:text-sm focus:font-bold focus:text-ink">Skip to main content</a>
+      
+        
+
+
+<header class="sticky top-0 z-(--z-nav) border-b-[3px] border-ink bg-bg">
+  
+  <div class="pv-prog" aria-hidden="true">
+    <i class="pv-prog-fill"></i>
+  </div>
+  <div class="page-container flex h-(--nav-h) items-center justify-between gap-4">
+    <a href="/"
+       class="flex min-h-11 items-center gap-2 font-black text-xl tracking-tight text-ink no-underline">
+      
+      <span class="pv-wordmark">PYVERSE<i class="pv-sq" aria-hidden="true"></i></span>
+    </a>
+    <nav aria-label="Main" class="hidden items-center gap-1 lg:flex">
+      
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-1"
+   href="/learn/"
+   
+   >Learn</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="/practice/"
+   
+   >Practice</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="/practice/sheets/"
+   
+   >Sheets</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-4 nav-active"
+   href="/python/"
+   
+   aria-current="page">Blog</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-3"
+   href="/labs/"
+   
+   >Labs</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-5"
+   href="/about/"
+   
+   >About</a>
+
+
+      
+
+
+      
+        <a href="/practice/"
+           class="ml-1 inline-flex min-h-11 items-center whitespace-nowrap border-[3px] border-ink bg-red px-4 font-mono text-xs font-bold text-bg no-underline hover:bg-ink">START SESSION</a>
+      
+    </nav>
+    <details class="group lg:hidden"
+             x-data="{}"
+             @keydown.escape.window="if ($el.open) { $el.open = false; $refs.toggle.focus() }"
+             @click.outside="$el.open = false">
+      <summary x-ref="toggle"
+               class="flex h-11 w-11 cursor-pointer list-none items-center justify-center border-[3px] border-ink bg-bg text-ink hover:bg-ink hover:text-bg [&::-webkit-details-marker]:hidden">
+        <span class="sr-only">Menu</span>
+        <svg class="h-5 w-5 group-open:hidden"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2.5"
+             stroke-linecap="round"
+             aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="hidden h-5 w-5 group-open:block"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2.5"
+             stroke-linecap="round"
+             aria-hidden="true">
+          <path d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </summary>
+      <nav aria-label="Main"
+           class="absolute inset-x-0 top-full z-(--z-drawer) flex max-h-[calc(100dvh-var(--nav-h))] flex-col overflow-y-auto border-b-[3px] border-ink bg-bg px-4 py-3 shadow-card sm:px-7">
+        
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-1"
+   href="/learn/"
+   
+   >Learn</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="/practice/"
+   
+   >Practice</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="/practice/sheets/"
+   
+   >Sheets</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-4 nav-active"
+   href="/python/"
+   
+   aria-current="page">Blog</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-3"
+   href="/labs/"
+   
+   >Labs</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-5"
+   href="/about/"
+   
+   >About</a>
+
+
+        
+
+
+        
+          <a href="/practice/"
+             class="mt-3 flex min-h-11 items-center justify-center border-[3px] border-ink bg-red px-4 font-mono text-[13px] font-bold text-bg no-underline hover:bg-ink">START SESSION</a>
+        
+      </nav>
+    </details>
+  </div>
+</header>
+
+      
+      <main id="main" tabindex="-1" class="focus:outline-none">
+        
+        
+          
+            <div class="page-container py-8">
+              
+  
+  
+  
+<header class="mb-8">
+  
+    
+
+
+
+
+  <nav aria-label="Breadcrumb" class="mb-4 font-mono text-xs text-muted">
+    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+      
+        
+      
+        
+      
+        
+          <li class="flex items-center gap-2">
+            <a href="/"
+               class="inline-flex min-h-11 items-center sm:min-h-6 text-body-txt underline underline-offset-4 hover:text-red">Home</a>
+            <span aria-hidden="true">/</span>
+          </li>
+        
+      
+      
+        <li aria-current="page" class="font-bold text-ink">Python</li>
+      
+    </ol>
+  </nav>
+
+
+  
+  <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
+    <div class="min-w-0">
+      <h1 class="font-black text-[clamp(30px,5vw,56px)] leading-[0.98] tracking-tighter text-ink">Python</h1>
+      
+      
+    </div>
+    
+  </div>
+</header>
+
+  
+  
+    <section aria-labelledby="entries-h">
+      <div class="mb-5 flex items-baseline justify-between gap-4 border-b-[3px] border-ink pb-2">
+        <h2 id="entries-h" class="font-black text-2xl tracking-tight">Entries</h2>
+        <p class="font-mono text-xs text-muted">1 total</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        
+          <a href="/python/notes/" class="card group no-underline">
+            <p class="mb-3 font-mono text-xs font-bold text-red">12 Sep 2026</p>
+            <h3 class="mb-3 font-black text-lg leading-snug tracking-tight text-ink group-hover:underline">Notes</h3>
+            
+            <p class="mt-auto border-t-2 border-ink/20 pt-3 font-mono text-xs font-bold text-ink">
+              Read article <span aria-hidden="true">→</span>
+            </p>
+          </a>
+        
+      </div>
+    </section>
+  
+
+            </div>
+          
+        
+      </main>
+      
+        
+
+
+<footer class="mt-auto border-t-[3px] border-ink bg-bg">
+  <div class="page-container pt-7 pb-8">
+    
+    <div class="flex flex-wrap justify-between gap-10 mb-7">
+      <div class="max-w-[240px]">
+        <div class="font-black text-[18px] tracking-tight mb-2">
+          <span class="pv-wordmark">PYVERSE<i class="pv-sq" aria-hidden="true"></i></span>
+        </div>
+        <p class="font-mono text-xs text-muted leading-relaxed">PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER</p>
+      </div>
+      
+      
+    </div>
+    
+    <div class="border-t-[3px] border-ink pt-4 flex justify-between items-center flex-wrap gap-3 font-mono text-xs text-muted">
+      <span>NO SERVER, NO WAIT</span>
+      <div class="flex gap-4 items-center">
+        
+          <a href="https://github.com/uditbaliyan/pyverse"
+             target="_blank"
+             rel="noopener"
+             aria-label="GitHub"
+             class="inline-flex h-11 w-11 items-center justify-center text-muted hover:text-ink transition-colors">
+            <svg width="18"
+                 height="18"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2.5"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+      
+    
+    
+    
+    
+    
+    
+    
+  </body>
+</html>

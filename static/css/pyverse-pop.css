@@ -1,0 +1,324 @@
+/* PyVerse "pop" layer.
+ *
+ * A thin, purely additive stylesheet that adds the poster's little pops of
+ * colour on top of the existing cream / ink / red theme. It is plain CSS (not
+ * Tailwind), so it works without rebuilding `dist/styles.css`, and it is loaded
+ * after project.css on every page by templates/base.html. To switch the whole
+ * layer off, remove that one <link>.
+ *
+ * Rules of the road
+ *  - Colour is decoration here, never meaning: every state keeps its text label
+ *    or icon. Pop colours are used for fills, bands and rules, not for small
+ *    text on cream (orange and yellow fail contrast there).
+ *  - No url() references: production uses a manifest static-files storage that
+ *    fails collectstatic on a CSS url() it cannot resolve.
+ *  - This file is unlayered, so it outranks Tailwind's utility layer. Keep
+ *    selectors narrow and name the hook (`.pv-*`) rather than restyling a
+ *    utility globally.
+ */
+
+:root {
+  /* The five-hue series from the poster. Red is the site's own red. */
+  --pop-1: #c62828; /* red    */
+  --pop-2: #f08a00; /* orange */
+  --pop-3: #f2c500; /* yellow */
+  --pop-4: #2f9e6a; /* green  */
+  --pop-5: #2f6fb0; /* blue   */
+  --pop-ink: #1a1a1a;
+  /* The current section's colour (set from the active nav item, see below). */
+  --pop: var(--pop-1);
+  --pop-rule: linear-gradient(
+    90deg,
+    var(--pop-1) 20%,
+    var(--pop-2) 20% 40%,
+    var(--pop-3) 40% 60%,
+    var(--pop-4) 60% 80%,
+    var(--pop-5) 80%
+  );
+}
+
+/* ── The signature stripe ─────────────────────────────────────────────────
+ * Home, Labs, Notes, Problem and Quiz pages carry a six-block divider built
+ * from `bg-s1`..`bg-s6` (used nowhere else). Recolour it: five pops and one
+ * ink block to close the line, instead of red / tan / ink / sage / cream / mud.
+ */
+.bg-s1 { background-color: var(--pop-1); }
+.bg-s2 { background-color: var(--pop-2); }
+.bg-s3 { background-color: var(--pop-3); }
+.bg-s4 { background-color: var(--pop-4); }
+.bg-s5 { background-color: var(--pop-5); }
+.bg-s6 { background-color: var(--pop-ink); }
+
+/* ── Scroll progress ──────────────────────────────────────────────────────
+ * The poster's one data line. It is drawn over the header's own 3px bottom
+ * border, so it reads as part of the nav rather than a bar stuck on top of the
+ * page: as you scroll, the border fills with colour from the left. Width comes
+ * from --p (0..1), written by js/pyverse-pop.js. With no JS it stays empty.
+ */
+.pv-prog {
+  position: absolute;
+  inset: auto 0 -3px 0;
+  height: 3px;
+  pointer-events: none;
+}
+.pv-prog > i {
+  display: block;
+  height: 100%;
+  width: calc(var(--p, 0) * 100%);
+  background: var(--pop-rule);
+  background-size: 100vw 100%;
+}
+@media print {
+  .pv-prog { display: none; }
+}
+
+/* ── Section colour ───────────────────────────────────────────────────────
+ * Each nav item carries `.nav-tone-N` (set from its URL in the context
+ * processor): 1 Learn red, 2 Practice orange, 3 Labs yellow, 4 Blog green,
+ * 5 About blue. The tone is a colour plus a text colour that stays readable
+ * on it (cream on red and blue, ink on the lighter three).
+ */
+.nav-tone-1 { --tone: var(--pop-1); --tone-ink: #f5eeda; }
+.nav-tone-2 { --tone: var(--pop-2); --tone-ink: var(--pop-ink); }
+.nav-tone-3 { --tone: var(--pop-3); --tone-ink: var(--pop-ink); }
+.nav-tone-4 { --tone: var(--pop-4); --tone-ink: var(--pop-ink); }
+.nav-tone-5 { --tone: var(--pop-5); --tone-ink: #f5eeda; }
+
+/* Hover: the section's own colour instead of black. */
+header nav a[class*="nav-tone-"]:not(.nav-active):hover,
+header nav a[class*="nav-tone-"]:not(.nav-active):focus-visible {
+  background-color: var(--tone);
+  color: var(--tone-ink);
+}
+/* Current section: ink chip with a bar in its colour. */
+header nav a.nav-active[class*="nav-tone-"] { box-shadow: inset 0 -4px 0 var(--tone); }
+
+/* The page inherits its section colour (rich-text headings, lesson sidebar). */
+body:has(header nav a.nav-active.nav-tone-1) { --pop: var(--pop-1); }
+body:has(header nav a.nav-active.nav-tone-2) { --pop: var(--pop-2); }
+body:has(header nav a.nav-active.nav-tone-3) { --pop: var(--pop-3); }
+body:has(header nav a.nav-active.nav-tone-4) { --pop: var(--pop-4); }
+body:has(header nav a.nav-active.nav-tone-5) { --pop: var(--pop-5); }
+
+/* The six-block divider is a hairline rule, not a banner. */
+.h-\[14px\]:has(> .bg-s1) { height: 6px; }
+
+/* ═══ Components ═════════════════════════════════════════════════════════
+ * Everything below hangs off an explicit hook: `.pv-*` classes added in the
+ * templates, or an existing component class (`a.card`, `.btn`, `.pv-side`).
+ */
+
+/* ── Tiles: a colour band on top of link cards and stat cards ─────────────
+ * Cycles through the five hues by position, so a row of cards reads like the
+ * poster's colour rail. Hover/translate behaviour is untouched.
+ */
+.pv-tile,
+a.card {
+  --tile: var(--pop-1);
+  --tile-h: 10px;
+  position: relative;
+}
+.pv-tile::before,
+a.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: var(--tile-h);
+  background: var(--tile);
+  pointer-events: none;
+}
+/* Leave room so the first line of text never touches the band. */
+.pv-tile { padding-top: calc(18px + 6px); }
+:is(.pv-tile, a.card):nth-child(5n + 2) { --tile: var(--pop-2); }
+:is(.pv-tile, a.card):nth-child(5n + 3) { --tile: var(--pop-3); }
+:is(.pv-tile, a.card):nth-child(5n + 4) { --tile: var(--pop-4); }
+:is(.pv-tile, a.card):nth-child(5n + 5) { --tile: var(--pop-5); }
+
+/* Quiz cards: `.pe-card` (practice-engine.css) overrides the border, radius and
+ * padding their markup asks for (3px ink, square, 18px), so they sat thin and
+ * rounded next to every other tile. Restore what the template intended. */
+.pe-card.pv-tile,
+.pe-card.pv-tile:hover {
+  border: 3px solid var(--pop-ink);
+  border-radius: 0;
+}
+.pe-card.pv-tile { padding: 24px 18px 18px; }
+
+/* Course cards with no image: tint the cover with the tile colour. */
+a.card .pv-cover { background-color: color-mix(in srgb, var(--tile) 32%, #f5eeda); }
+a.card .pv-cover > div {
+  font-size: 72px;
+  color: var(--pop-ink);
+  text-shadow: 4px 4px 0 var(--tile);
+}
+
+/* ── Difficulty ───────────────────────────────────────────────────────────
+ * Easy green, medium orange, hard red. Text colour is picked for contrast
+ * against each fill, and the word itself is always shown.
+ */
+.pv-diff-easy   { background-color: var(--pop-4); color: var(--pop-ink); }
+.pv-diff-medium { background-color: var(--pop-2); color: var(--pop-ink); }
+.pv-diff-hard   { background-color: var(--pop-1); color: #f5eeda; }
+
+/* A small square before the label (Labs index), for text that stays on cream. */
+.pv-dot::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  background: var(--pop-ink);
+  vertical-align: baseline;
+}
+.pv-dot.pv-diff-easy::before   { background: var(--pop-4); }
+.pv-dot.pv-diff-medium::before { background: var(--pop-2); }
+.pv-dot.pv-diff-hard::before   { background: var(--pop-1); }
+.pv-dot.pv-diff-easy,
+.pv-dot.pv-diff-medium,
+.pv-dot.pv-diff-hard { background: none; }
+
+/* Practice tables and track lists (light pages only; the dark console keeps
+ * its own badge). Specificity beats practice-engine.css regardless of order. */
+.pe-engine.pe-on-light .pe-badge.diff-easy   { background: var(--pop-4); color: var(--pop-ink); border-color: var(--pop-ink); }
+.pe-engine.pe-on-light .pe-badge.diff-medium { background: var(--pop-2); color: var(--pop-ink); border-color: var(--pop-ink); }
+.pe-engine.pe-on-light .pe-badge.diff-hard   { background: var(--pop-1); color: #f5eeda;        border-color: var(--pop-ink); }
+
+/* ── Buttons: the poster's hard-shadow press ──────────────────────────────
+ * Normal and large buttons only. Small, ghost and disabled ones stay flat so
+ * dense toolbars and filter chips don't grow shadows.
+ */
+.btn:not(.btn-sm):not(.btn-ghost):not(:disabled):not([aria-disabled="true"]),
+.pv-press {
+  box-shadow: 3px 3px 0 var(--pop-ink);
+  transition:
+    translate 80ms ease,
+    box-shadow 80ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+.btn:not(.btn-sm):not(.btn-ghost):not(:disabled):not([aria-disabled="true"]):hover,
+.pv-press:hover {
+  translate: 2px 2px;
+  box-shadow: 1px 1px 0 var(--pop-ink);
+}
+.btn:not(.btn-sm):not(.btn-ghost):not(:disabled):not([aria-disabled="true"]):active,
+.pv-press:active {
+  translate: 3px 3px;
+  box-shadow: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .pv-press { transition: none; }
+}
+
+/* ── Rich text (About, track intros) ──────────────────────────────────────
+ * Wagtail headings were unstyled (Tailwind preflight flattens them), so
+ * "Why this exists" read as body copy. Blog entries have their own heading
+ * rules in pyverse-blog.css, so `.pv-body` is excluded.
+ */
+.rich-text:not(.pv-body) :is(h2, h3, h4) {
+  margin: 1.7em 0 0.55em;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--pop-ink);
+}
+.rich-text:not(.pv-body) h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  padding-left: 12px;
+  border-left: 8px solid var(--pop);
+}
+.rich-text:not(.pv-body) h3 { font-size: 18px; }
+.rich-text:not(.pv-body) h4 {
+  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.rich-text:not(.pv-body) > :is(h2, h3, h4):first-child { margin-top: 0; }
+.rich-text:not(.pv-body) :is(p, ul, ol) + :is(p, ul, ol) { margin-top: 0.9em; }
+
+/* ── Lessons ──────────────────────────────────────────────────────────────
+ * The current lesson in the sidebar keeps its ink fill and gets a bar in the
+ * section colour on its leading edge.
+ */
+[data-lesson-list] a[aria-current="page"] { box-shadow: inset 6px 0 0 var(--pop); }
+
+/* ── Blog ─────────────────────────────────────────────────────────────────
+ * Sidebar boxes take the colour rail and entry cards get the same band as tiles.
+ */
+.pv-blog .pv-side,
+.pv-blog article.pv-card {
+  --tile: var(--pop-1);
+  --tile-h: 8px;
+  position: relative;
+}
+.pv-blog .pv-side::before,
+.pv-blog article.pv-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: var(--tile-h);
+  background: var(--tile);
+  pointer-events: none;
+}
+.pv-blog .pv-side.pv-side { padding-top: 22px; } /* doubled class: outranks pyverse-blog.css */
+.pv-blog .pv-side-col > section.pv-side:nth-of-type(5n + 2),
+.pv-blog article.pv-card:nth-of-type(5n + 2) { --tile: var(--pop-2); }
+.pv-blog .pv-side-col > section.pv-side:nth-of-type(5n + 3),
+.pv-blog article.pv-card:nth-of-type(5n + 3) { --tile: var(--pop-3); }
+.pv-blog .pv-side-col > section.pv-side:nth-of-type(5n + 4),
+.pv-blog article.pv-card:nth-of-type(5n + 4) { --tile: var(--pop-4); }
+.pv-blog .pv-side-col > section.pv-side:nth-of-type(5n + 5),
+.pv-blog article.pv-card:nth-of-type(5n + 5) { --tile: var(--pop-5); }
+
+/* ── Contrast fix ─────────────────────────────────────────────────────────
+ * `.pe-engine a { color: inherit }` (practice-engine.css) is unlayered, so it
+ * beats Tailwind's `text-[#F5EEDA]` on red buttons inside light practice
+ * pages: the Sheet "Resume" button read dark-on-red (~3:1). Restore cream.
+ */
+.pe-engine.pe-on-light a.bg-red { color: #f5eeda; }
+
+/* ═══ Type and brand ═════════════════════════════════════════════════════
+ * Archivo is a variable font with a width axis; the poster sets its display
+ * type condensed and heavy. The family is loaded from the same Google Fonts
+ * <link> as Inter and JetBrains Mono (templates/base.html). If it fails to
+ * load, the stack falls back to Inter and `font-stretch` is simply ignored,
+ * which is exactly how headings looked before.
+ */
+:root {
+  --pv-display: "Archivo", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Page titles, section headings and card titles. The dark practice console
+ * keeps its own type. */
+h1.font-black:not(.pe-console *),
+h2.font-black:not(.pe-console *),
+h3.font-black:not(.pe-console *) {
+  font-family: var(--pv-display);
+  letter-spacing: -0.01em;
+}
+h1.font-black:not(.pe-console *) { font-stretch: 76%; letter-spacing: -0.02em; }
+h2.font-black:not(.pe-console *) { font-stretch: 80%; }
+h3.font-black:not(.pe-console *) { font-stretch: 88%; }
+
+/* The wordmark: heavy condensed letters and a red square in place of the
+ * period. The square is drawn, not typed, so it stays crisp at any size and
+ * can be pressed in the hero. */
+.pv-wordmark {
+  font-family: var(--pv-display);
+  font-size: 1.2em;
+  font-weight: 900;
+  font-stretch: 80%;
+  letter-spacing: -0.01em;
+}
+.pv-sq {
+  display: inline-block;
+  width: 0.2em;
+  height: 0.2em;
+  min-width: 5px;
+  min-height: 5px;
+  margin-left: 0.07em;
+  background: var(--pop-1);
+}

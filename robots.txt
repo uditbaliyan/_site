@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cms/
+Disallow: /accounts/
+
+Sitemap: https://pyverse.com/sitemap.xml

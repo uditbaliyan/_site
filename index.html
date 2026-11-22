@@ -1,0 +1,645 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Udit Baliyan" />
+    <link rel="icon" href="/static/images/favicons/favicon.ico" />
+    
+      
+      <title>PyVerse — learn Python by running it</title>
+      
+
+
+<meta name="description" content="PyVerse is a free, browser-based Python learning platform: guided courses, graded practice challenges, memory-tracing labs and a blog. No signup — every…" />
+<link rel="canonical" href="https://pyverse.com/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PyVerse" />
+<meta property="og:title" content="PyVerse — learn Python by running it" />
+<meta property="og:description" content="PyVerse is a free, browser-based Python learning platform: guided courses, graded practice challenges, memory-tracing labs and a blog. No signup — every…" />
+<meta property="og:url" content="https://pyverse.com/" />
+
+<meta name="twitter:card"
+      content="summary" />
+<meta name="twitter:title" content="PyVerse — learn Python by running it" />
+<meta name="twitter:description" content="PyVerse is a free, browser-based Python learning platform: guided courses, graded practice challenges, memory-tracing labs and a blog. No signup — every…" />
+
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;700;900&family=Archivo:wdth,wght@62..125,400..900&display=swap"
+          rel="stylesheet" />
+    
+      
+
+<link rel="stylesheet" type="text/css" href="/static/css/dist/styles.css">
+
+      <link href="/static/css/project.css" rel="stylesheet" />
+      <link href="/static/css/pyverse-pop.css" rel="stylesheet" />
+    
+    
+  <link href="/static/css/pyverse-home.css" rel="stylesheet" />
+
+    
+      <script defer
+              src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      <script defer src="/static/js/project.js"></script>
+      <script defer src="/static/js/pyverse-pop.js"></script>
+    
+  </head>
+  <body class="flex min-h-screen flex-col bg-bg font-sans text-base leading-relaxed text-ink "
+        
+        >
+    
+      <a href="#main"
+         class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-(--z-toast) focus:border-[3px] focus:border-ink focus:bg-bg focus:px-4 focus:py-3 focus:font-mono focus:text-sm focus:font-bold focus:text-ink">Skip to main content</a>
+      
+        
+
+
+<header class="sticky top-0 z-(--z-nav) border-b-[3px] border-ink bg-bg">
+  
+  <div class="pv-prog" aria-hidden="true">
+    <i class="pv-prog-fill"></i>
+  </div>
+  <div class="page-container flex h-(--nav-h) items-center justify-between gap-4">
+    <a href="/"
+       class="flex min-h-11 items-center gap-2 font-black text-xl tracking-tight text-ink no-underline">
+      
+      <span class="pv-wordmark">PYVERSE<i class="pv-sq" aria-hidden="true"></i></span>
+    </a>
+    <nav aria-label="Main" class="hidden items-center gap-1 lg:flex">
+      
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-1"
+   href="/learn/"
+   
+   >Learn</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="/practice/"
+   
+   >Practice</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="/practice/sheets/"
+   
+   >Sheets</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-4"
+   href="/python/"
+   
+   >Blog</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-3"
+   href="/labs/"
+   
+   >Labs</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-5"
+   href="/about/"
+   
+   >About</a>
+
+
+      
+
+
+      
+        <a href="/practice/"
+           class="ml-1 inline-flex min-h-11 items-center whitespace-nowrap border-[3px] border-ink bg-red px-4 font-mono text-xs font-bold text-bg no-underline hover:bg-ink">START SESSION</a>
+      
+    </nav>
+    <details class="group lg:hidden"
+             x-data="{}"
+             @keydown.escape.window="if ($el.open) { $el.open = false; $refs.toggle.focus() }"
+             @click.outside="$el.open = false">
+      <summary x-ref="toggle"
+               class="flex h-11 w-11 cursor-pointer list-none items-center justify-center border-[3px] border-ink bg-bg text-ink hover:bg-ink hover:text-bg [&::-webkit-details-marker]:hidden">
+        <span class="sr-only">Menu</span>
+        <svg class="h-5 w-5 group-open:hidden"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2.5"
+             stroke-linecap="round"
+             aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="hidden h-5 w-5 group-open:block"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2.5"
+             stroke-linecap="round"
+             aria-hidden="true">
+          <path d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </summary>
+      <nav aria-label="Main"
+           class="absolute inset-x-0 top-full z-(--z-drawer) flex max-h-[calc(100dvh-var(--nav-h))] flex-col overflow-y-auto border-b-[3px] border-ink bg-bg px-4 py-3 shadow-card sm:px-7">
+        
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-1"
+   href="/learn/"
+   
+   >Learn</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="/practice/"
+   
+   >Practice</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="/practice/sheets/"
+   
+   >Sheets</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-4"
+   href="/python/"
+   
+   >Blog</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-3"
+   href="/labs/"
+   
+   >Labs</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-5"
+   href="/about/"
+   
+   >About</a>
+
+
+        
+
+
+        
+          <a href="/practice/"
+             class="mt-3 flex min-h-11 items-center justify-center border-[3px] border-ink bg-red px-4 font-mono text-[13px] font-bold text-bg no-underline hover:bg-ink">START SESSION</a>
+        
+      </nav>
+    </details>
+  </div>
+</header>
+
+      
+      <main id="main" tabindex="-1" class="focus:outline-none">
+        
+        
+          
+  
+  <div class="page-container pvh-page pt-7 pb-[90px]">
+    
+    
+    
+    <section class="pvh-hero mt-[26px] grid grid-cols-[60px_1fr_340px] gap-6 items-stretch max-[900px]:grid-cols-1"
+             aria-label="Hero">
+      
+      
+        <div class="pvh-tab max-[900px]:hidden [writing-mode:vertical-rl] font-mono text-[12.5px] tracking-[2px] text-bg bg-ink px-1.5 py-4 flex items-center justify-center select-none">
+          READ THE STACK, NOT THE GUESS
+        </div>
+      
+      
+      <div class="pvh-copy">
+        
+        <h1 class="pvh-title"><span>PY</span><span class="pvh-v">VERSE<span class="pvh-dot" id="egg"></span></span></h1>
+        
+        
+        <div class="mt-[26px] flex gap-3 flex-wrap">
+          
+            <a href="#modules"
+               class="pv-press font-mono font-bold text-[13px] no-underline px-5 py-3 border-[3px] border-ink bg-red text-[#F5EEDA] hover:bg-[#963026] transition-colors">
+              START SESSION
+            </a>
+          
+          
+            <a href="#modules"
+               class="pv-press font-mono font-bold text-[13px] no-underline px-5 py-3 border-[3px] border-ink text-ink hover:bg-ink hover:text-bg transition-colors">
+              VIEW MODULES
+            </a>
+          
+        </div>
+      </div>
+      
+      <div class="pvh-unit">
+        <div class="bg-device border-[3px] border-ink px-4 pt-[18px] pb-[22px] flex flex-col gap-3.5 shadow-device">
+          <div class="flex justify-between font-mono text-[10px] text-muted">
+            <span>PYVERSE UNIT</span>
+            <span>MODEL // PV-01</span>
+          </div>
+          <div class="bg-ink p-2.5 rounded-sm">
+            <div class="pvh-scr" role="group" aria-label="Live code trace">
+              <div class="pvh-bar">
+                <span data-device-title>Live trace</span>
+                <span data-device-step></span>
+              </div>
+              
+              <div class="pvh-lcd" id="device-screen" data-device-screen aria-live="off">
+                
+                  <div class="hd">&gt;&gt;&gt; trace(average)</div>
+                  <div class="code">
+                    <div class="ln">def average(nums):</div>
+                    <div class="ln">total = 0</div>
+                    <div class="ln">for n in nums:</div>
+                    <div class="ln">total += n</div>
+                    <div class="ln">return total / len(nums)</div>
+                    <div class="ln on">average([1, 2, 3, 4])</div>
+                  </div>
+                  <div class="st"><b>values</b>nums=[1, 2, 3, 4]</div>
+                  <div class="st"><b>output</b></div>
+                
+              </div>
+              <div class="pvh-sp" aria-hidden="true">
+                <i data-device-progress></i>
+              </div>
+            </div>
+            <script id="device-code" type="application/json">""</script>
+          </div>
+          <div class="text-center text-xl">
+            <span class="pv-wordmark">PY<span class="text-red">VERSE</span><i class="pv-sq" aria-hidden="true"></i></span>
+          </div>
+          <div class="flex justify-between items-center mt-1.5">
+            <div class="w-14 h-14 relative">
+              <div class="absolute w-14 h-[18px] bg-ink top-[19px] left-0"></div>
+              <div class="absolute w-[18px] h-14 bg-ink top-0 left-[19px]"></div>
+            </div>
+            <div class="flex gap-2.5">
+              <div class="w-[26px] h-[26px] rounded-full bg-red border-2 border-ink"
+                   data-device-btn="prev"></div>
+              <div class="w-[26px] h-[26px] rounded-full bg-red border-2 border-ink"
+                   data-device-btn="next"></div>
+            </div>
+          </div>
+          <div class="flex justify-center gap-2.5 font-mono text-[9px] text-muted">
+            <div class="w-[34px] h-[9px] bg-ink rounded-full" data-device-btn="play"></div>
+            <div class="w-[34px] h-[9px] bg-ink rounded-full"></div>
+          </div>
+        </div>
+        
+        <div class="pvh-ctl" hidden>
+          <button type="button" data-k="back">Back</button>
+          <button type="button" data-k="next">Next line</button>
+          <button type="button" data-k="play" aria-pressed="true">Pause</button>
+          <button type="button" data-k="prog">Next program</button>
+        </div>
+        <p class="pvh-hint" hidden>
+          The red bar is the line Python is running right now. <b>values</b> are your variables after that line. <b>output</b> is what the program prints or returns. Press Next line to step through it yourself.
+        </p>
+      </div>
+    </section>
+    
+    
+    
+    <nav class="pvh-rail" aria-label="Sections">
+      
+        <a href="#learn" class="nav-tone-1">Learn<small>1 course</small></a>
+      
+        <a href="#practice" class="nav-tone-2">Practice<small>4 problems</small></a>
+      
+        <a href="#labs" class="nav-tone-3">Labs<small>2 traces</small></a>
+      
+        <a href="#blog" class="nav-tone-4">Blog<small>1 note</small></a>
+      
+        <a href="#python" class="nav-tone-5">Python<small>the basics</small></a>
+      
+    </nav>
+    
+    
+    
+    
+    
+    
+    
+    <div class="mt-12 mb-5 flex items-baseline gap-3.5" id="modules">
+      <h2 class="font-black text-[28px] tracking-tight">Select a Module</h2>
+      <span class="font-mono text-[13px] text-muted">00 loaded</span>
+    </div>
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-[18px]">
+      
+    </div>
+    
+    
+    
+    <section class="pvh-sec" id="learn" data-c="1" aria-labelledby="learn-title">
+      <h2 id="learn-title">Learn</h2>
+      <p class="pvh-sub">
+        Short ordered courses that build on each other. Each lesson is a few minutes of reading plus something to run yourself.
+      </p>
+      <div class="pvh-two">
+        
+          
+            <article class="pvh-card">
+              <div class="pvh-pills">
+                <span class="pvh-pill">Standard Course</span>
+                <span class="pvh-pill">Beginner</span>
+                <span class="pvh-pill on">Free</span>
+              </div>
+              <h3>Python Foundations</h3>
+              <p>Write, run and reason about small Python programs: values and names, functions, strings, and your first taste of lists.</p>
+              
+                <ol class="pvh-lessons">
+                  
+                    <li>
+                      <a href="/learn/python-basics/python-foundations/functions-that-return/">Functions that return a value</a>
+                      <i>6 min</i>
+                    </li>
+                  
+                    <li>
+                      <a href="/learn/python-basics/python-foundations/loops-and-accumulators/">Loops and accumulators</a>
+                      <i>8 min</i>
+                    </li>
+                  
+                </ol>
+              
+              <a class="pvh-btn red pv-press" href="/learn/python-basics/python-foundations/">Start learning</a>
+            </article>
+          
+        
+        <div class="pvh-case ok">
+          <div class="lab">greet.py</div>
+          <pre><span class="k">def</span> greet(name):
+    <span class="g">return</span> "Hello, " + name + "!"
+
+print(greet("Ada"))  # Hello, Ada!</pre>
+          <div class="res">
+            <span>print shows it to you</span>
+            <span>return hands it back</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pvh-sec"
+             id="practice"
+             data-c="2"
+             aria-labelledby="practice-title">
+      <h2 id="practice-title">Practice</h2>
+      <p class="pvh-sub">
+        Problems with a console, hidden test cases, hints and an editorial. Python runs in your browser, so Run and Submit never wait on a server.
+      </p>
+      <div class="pvh-chips" aria-label="Ways to filter problems">
+        <span>Filter by</span>
+        <span class="pvh-pill">difficulty</span>
+        <span class="pvh-pill">topic</span>
+        <span class="pvh-pill">company</span>
+        <span class="pvh-pill">pattern</span>
+        <span class="pvh-pill">technique</span>
+      </div>
+      <div class="pvh-two">
+        
+          <table class="pvh-tb">
+            <thead>
+              <tr>
+                <th scope="col">Problem</th>
+                <th scope="col">Level</th>
+                <th scope="col">Topic</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>
+                    <a href="/practice/problem/average-of-numbers/">Average of Numbers</a>
+                  </td>
+                  <td>
+                    <span class="pvh-lv pv-diff-easy">Easy</span>
+                  </td>
+                  <td>Arrays &amp; Hashing</td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    <a href="/practice/problem/running-sum/">Running Sum of 1d Array</a>
+                  </td>
+                  <td>
+                    <span class="pvh-lv pv-diff-easy">Easy</span>
+                  </td>
+                  <td>Arrays &amp; Hashing</td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    <a href="/practice/problem/two-sum/">Two Sum</a>
+                  </td>
+                  <td>
+                    <span class="pvh-lv pv-diff-easy">Easy</span>
+                  </td>
+                  <td>Arrays &amp; Hashing</td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    <a href="/practice/problem/print-hello-world/">print hello world</a>
+                  </td>
+                  <td>
+                    <span class="pvh-lv pv-diff-easy">Easy</span>
+                  </td>
+                  <td>Warm-up</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+        <div class="pvh-case ok">
+          <div class="lab">average.py</div>
+          <pre><span class="k">def</span> average(nums):
+    <span class="g">return</span> sum(nums) / len(nums)
+
+average([1, 2, 3, 4])</pre>
+          <div class="res">
+            <span>3 of 3 cases passed</span>
+            <span>2.5</span>
+          </div>
+        </div>
+      </div>
+      
+        <a class="pvh-btn red pv-press" href="/practice/">
+          Browse all 4 problems
+        </a>
+      
+    </section>
+    <section class="pvh-sec" id="labs" data-c="3" aria-labelledby="labs-title">
+      <h2 id="labs-title">Labs</h2>
+      <p class="pvh-sub">
+        Step through a program one line at a time and watch what Python actually does: which lines run, what each name points at, and what the memory behind it looks like.
+      </p>
+      <div class="pvh-two">
+        <div>
+          
+            <ol class="pvh-lessons pvh-flush">
+              
+                <li>
+                  <a href="/labs/two-sum-one-pass/">Two Sum, one pass</a>
+                  <i>Line trace, 6 min</i>
+                </li>
+              
+                <li>
+                  <a href="/labs/two-names-one-list/">Two names, one list</a>
+                  <i>Memory graph, 7 min</i>
+                </li>
+              
+            </ol>
+          
+          <p>Aliasing is where most beginners get surprised. Flip between the two cases and watch the arrows.</p>
+          
+            <p class="pvh-cta">
+              <a class="pvh-btn red pv-press" href="/labs/">Trace a program</a>
+            </p>
+          
+        </div>
+        <div class="pvh-fig" data-mode="alias">
+          <svg viewBox="0 0 360 170"
+               role="img"
+               aria-label="Names a and b pointing at lists in memory">
+            <defs>
+            <marker id="pvh-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0L10 5L0 10z" />
+            </marker>
+            </defs>
+            <rect x="8" y="22" width="52" height="32" fill="#1c1b19" />
+            <text class="nm" x="34" y="43" text-anchor="middle">a</text>
+            <rect x="8" y="108" width="52" height="32" fill="#1c1b19" />
+            <text class="nm" x="34" y="129" text-anchor="middle">b</text>
+            <rect class="box" x="200" y="22" width="150" height="32" />
+            <text x="275" y="43" text-anchor="middle">[1, 2, 3]</text>
+            <line x1="62" y1="38" x2="196" y2="38" marker-end="url(#pvh-ah)" />
+            <g class="al">
+            <line x1="62" y1="124" x2="196" y2="52" marker-end="url(#pvh-ah)" />
+            </g>
+            <g class="cp">
+            <rect class="box" x="200" y="108" width="150" height="32" />
+            <text x="275" y="129" text-anchor="middle">[1, 2, 3]</text>
+            <line x1="62" y1="124" x2="196" y2="124" marker-end="url(#pvh-ah)" />
+            </g>
+          </svg>
+          <div class="sw" hidden>
+            <button type="button" data-m="alias" aria-pressed="true">b = a</button>
+            <button type="button" data-m="copy" aria-pressed="false">b = a.copy()</button>
+          </div>
+          <p class="cap">a is b: True. One list, two names. b.append(4) changes both.</p>
+        </div>
+      </div>
+    </section>
+    <section class="pvh-sec" id="blog" data-c="4" aria-labelledby="blog-title">
+      <h2 id="blog-title">Blog</h2>
+      <p class="pvh-sub">Longer notes on the concepts people trip over, with snippets you can run.</p>
+      
+        
+          <article class="pvh-card pvh-narrow">
+            <div class="pvh-pills">
+              <span class="pvh-pill">12 Sep 2026</span>
+              <span class="pvh-pill">Notes</span>
+            </div>
+            <h3>
+              <a href="/python/notes/why-return-matters/">Why return matters more than print</a>
+            </h3>
+            <p>The single habit that separates code that passes a grader from code that only looks right.</p>
+          </article>
+        
+      
+      
+        <p class="pvh-cta">
+          <a class="pvh-btn pv-press" href="/python/notes/">All notes</a>
+        </p>
+      
+    </section>
+    <section class="pvh-sec" id="python" data-c="5" aria-labelledby="python-title">
+      <h2 id="python-title">All about Python</h2>
+      <p class="pvh-sub">
+        Python is a general-purpose language built for readable code. The same few ideas carry from a ten-line script to a web app or a data pipeline.
+      </p>
+      <div class="pvh-use">
+        <div class="pvh-card">
+          <h3>Web</h3>
+          <p>Sites and APIs with Django, Flask or FastAPI. PyVerse itself is Django and Wagtail.</p>
+          <code>path("learn/", views.learn)</code>
+        </div>
+        <div class="pvh-card">
+          <h3>Data</h3>
+          <p>Load, clean and summarise tables with pandas and NumPy.</p>
+          <code>df.groupby("city")["sales"].sum()</code>
+        </div>
+        <div class="pvh-card">
+          <h3>Automation</h3>
+          <p>Rename files, scrape pages and glue tools together in a few lines.</p>
+          <code>for f in Path(".").glob("*.csv"):</code>
+        </div>
+        <div class="pvh-card">
+          <h3>AI and science</h3>
+          <p>Numerical work, plots and machine learning all start from the same basics.</p>
+          <code>np.mean([1, 2, 3, 4])</code>
+        </div>
+      </div>
+      <div class="pvh-chips" aria-label="Core ideas">
+        <span>Core ideas</span>
+        <span class="pvh-pill on">values and names</span>
+        <span class="pvh-pill on">functions</span>
+        <span class="pvh-pill on">loops</span>
+        <span class="pvh-pill nx">lists</span>
+        <span class="pvh-pill nx">dictionaries</span>
+        <span class="pvh-pill nx">classes</span>
+        <span class="pvh-pill nx">modules</span>
+      </div>
+      
+        <a class="pvh-btn red pv-press" href="/learn/">Run your first program</a>
+      
+    </section>
+  </div>
+
+
+        
+      </main>
+      
+        
+
+
+<footer class="mt-auto border-t-[3px] border-ink bg-bg">
+  <div class="page-container pt-7 pb-8">
+    
+    <div class="flex flex-wrap justify-between gap-10 mb-7">
+      <div class="max-w-[240px]">
+        <div class="font-black text-[18px] tracking-tight mb-2">
+          <span class="pv-wordmark">PYVERSE<i class="pv-sq" aria-hidden="true"></i></span>
+        </div>
+        <p class="font-mono text-xs text-muted leading-relaxed">PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER</p>
+      </div>
+      
+      
+    </div>
+    
+    <div class="border-t-[3px] border-ink pt-4 flex justify-between items-center flex-wrap gap-3 font-mono text-xs text-muted">
+      <span>NO SERVER, NO WAIT</span>
+      <div class="flex gap-4 items-center">
+        
+          <a href="https://github.com/uditbaliyan/pyverse"
+             target="_blank"
+             rel="noopener"
+             aria-label="GitHub"
+             class="inline-flex h-11 w-11 items-center justify-center text-muted hover:text-ink transition-colors">
+            <svg width="18"
+                 height="18"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2.5"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+      
+    
+    
+    
+    
+  <script defer src="/static/js/home-device.js"></script>
+
+    
+    
+  </body>
+</html>
