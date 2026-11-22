@@ -1,0 +1,353 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Udit Baliyan" />
+    <link rel="icon" href="../../../static/images/favicons/favicon.ico" />
+    
+      
+      <title>Control Flow &amp; Loops · PyVerse</title>
+      
+
+
+<meta name="description" content="PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER" />
+<link rel="canonical" href="https://pyverse.com/drills/parsons/control-flow-and-loops/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PyVerse" />
+<meta property="og:title" content="Control Flow &amp; Loops · PyVerse" />
+<meta property="og:description" content="PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER" />
+<meta property="og:url" content="https://pyverse.com/drills/parsons/control-flow-and-loops/" />
+
+<meta name="twitter:card"
+      content="summary" />
+<meta name="twitter:title" content="Control Flow &amp; Loops · PyVerse" />
+<meta name="twitter:description" content="PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER" />
+
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;700;900&family=Archivo:wdth,wght@62..125,400..900&display=swap"
+          rel="stylesheet" />
+    
+      
+
+<link rel="stylesheet" type="text/css" href="../../../static/css/dist/styles.css">
+
+      <link href="../../../static/css/project.css" rel="stylesheet" />
+      <link href="../../../static/css/pyverse-pop.css" rel="stylesheet" />
+    
+    
+  <link rel="stylesheet" href="../../../static/css/drills.css" />
+  
+  
+
+    
+      <script defer
+              src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      <script defer src="../../../static/js/project.js"></script>
+      <script defer src="../../../static/js/pyverse-pop.js"></script>
+    
+  </head>
+  <body class="flex min-h-screen flex-col bg-bg font-sans text-base leading-relaxed text-ink "
+        
+        >
+    
+      <a href="#main"
+         class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-(--z-toast) focus:border-[3px] focus:border-ink focus:bg-bg focus:px-4 focus:py-3 focus:font-mono focus:text-sm focus:font-bold focus:text-ink">Skip to main content</a>
+      
+        
+
+
+<header class="sticky top-0 z-(--z-nav) border-b-[3px] border-ink bg-bg">
+  
+  <div class="pv-prog" aria-hidden="true">
+    <i class="pv-prog-fill"></i>
+  </div>
+  <div class="page-container flex h-(--nav-h) items-center justify-between gap-4">
+    <a href="../../../index.html"
+       class="flex min-h-11 items-center gap-2 font-black text-xl tracking-tight text-ink no-underline">
+      
+      <span class="pv-wordmark">PYVERSE<i class="pv-sq" aria-hidden="true"></i></span>
+    </a>
+    <nav aria-label="Main" class="hidden items-center gap-1 lg:flex">
+      
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-1"
+   href="../../../learn/index.html"
+   
+   >Learn</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="../../../practice/index.html"
+   
+   >Practice</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="../../../practice/sheets/index.html"
+   
+   >Sheets</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-4"
+   href="../../../python/index.html"
+   
+   >Blog</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-3"
+   href="../../../labs/index.html"
+   
+   >Labs</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-5"
+   href="../../../about/index.html"
+   
+   >About</a>
+
+
+      
+
+
+      
+        <a href="../../../practice/index.html"
+           class="ml-1 inline-flex min-h-11 items-center whitespace-nowrap border-[3px] border-ink bg-red px-4 font-mono text-xs font-bold text-bg no-underline hover:bg-ink">START SESSION</a>
+      
+    </nav>
+    <details class="group lg:hidden"
+             x-data="{}"
+             @keydown.escape.window="if ($el.open) { $el.open = false; $refs.toggle.focus() }"
+             @click.outside="$el.open = false">
+      <summary x-ref="toggle"
+               class="flex h-11 w-11 cursor-pointer list-none items-center justify-center border-[3px] border-ink bg-bg text-ink hover:bg-ink hover:text-bg [&::-webkit-details-marker]:hidden">
+        <span class="sr-only">Menu</span>
+        <svg class="h-5 w-5 group-open:hidden"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2.5"
+             stroke-linecap="round"
+             aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="hidden h-5 w-5 group-open:block"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2.5"
+             stroke-linecap="round"
+             aria-hidden="true">
+          <path d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </summary>
+      <nav aria-label="Main"
+           class="absolute inset-x-0 top-full z-(--z-drawer) flex max-h-[calc(100dvh-var(--nav-h))] flex-col overflow-y-auto border-b-[3px] border-ink bg-bg px-4 py-3 shadow-card sm:px-7">
+        
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-1"
+   href="../../../learn/index.html"
+   
+   >Learn</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="../../../practice/index.html"
+   
+   >Practice</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="../../../practice/sheets/index.html"
+   
+   >Sheets</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-4"
+   href="../../../python/index.html"
+   
+   >Blog</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-3"
+   href="../../../labs/index.html"
+   
+   >Labs</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-5"
+   href="../../../about/index.html"
+   
+   >About</a>
+
+
+        
+
+
+        
+          <a href="../../../practice/index.html"
+             class="mt-3 flex min-h-11 items-center justify-center border-[3px] border-ink bg-red px-4 font-mono text-[13px] font-bold text-bg no-underline hover:bg-ink">START SESSION</a>
+        
+      </nav>
+    </details>
+  </div>
+</header>
+
+      
+      <main id="main" tabindex="-1" class="focus:outline-none">
+        
+        
+          
+  
+  <div class="page-container pt-7 pb-[90px]">
+    
+
+
+
+
+  <nav aria-label="Breadcrumb" class="mb-4 font-mono text-xs text-muted">
+    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+      
+        
+      
+        
+      
+        
+          <li class="flex items-center gap-2">
+            <a href="../../../index.html"
+               class="inline-flex min-h-11 items-center sm:min-h-6 text-body-txt underline underline-offset-4 hover:text-red">Home</a>
+            <span aria-hidden="true">/</span>
+          </li>
+        
+      
+        
+          <li class="flex items-center gap-2">
+            <a href="../../../drills/index.html"
+               class="inline-flex min-h-11 items-center sm:min-h-6 text-body-txt underline underline-offset-4 hover:text-red">Drills</a>
+            <span aria-hidden="true">/</span>
+          </li>
+        
+      
+        
+          <li class="flex items-center gap-2">
+            <a href="../../../drills/parsons/index.html"
+               class="inline-flex min-h-11 items-center sm:min-h-6 text-body-txt underline underline-offset-4 hover:text-red">Parsons Puzzles</a>
+            <span aria-hidden="true">/</span>
+          </li>
+        
+      
+      
+        <li class="flex items-center gap-2">
+          <a href="../../../drills/parsons/control-flow-and-loops/index.html"
+             class="inline-flex min-h-11 items-center sm:min-h-6 text-body-txt underline underline-offset-4 hover:text-red">Control Flow &amp; Loops</a>
+          <span aria-hidden="true">/</span>
+        </li>
+        <li aria-current="page" class="font-bold text-ink">1</li>
+      
+    </ol>
+  </nav>
+
+
+    <h1 class="mt-2 font-black text-[clamp(28px,4.5vw,48px)] leading-[0.98] tracking-tighter">Control Flow &amp; Loops</h1>
+    
+    <p class="mt-4 font-mono text-[12px] text-muted">
+      2 puzzles · page 1 of 1
+      · <span data-page-progress data-store="pv:parsons:solved" data-slugs="word-frequency-counter,grade-classifier">0 solved on this page</span>
+    </p>
+    
+      
+              
+        <article id="word-frequency-counter" class="pv-parsons" data-parsons data-payload="parsons-word-frequency-counter">
+          <header class="pv-parsons__head">
+            <span class="pv-parsons__num">1</span>
+            <h2 class="pv-parsons__title">Word Frequency Counter</h2>
+            <span class="pv-parsons__meta">Medium · Dictionary Iteration</span>
+          </header>
+          <p class="pv-parsons__desc">Build a function that counts word frequencies in a sentence and prints each word with its count in `word: count` format, sorted alphabetically. Use a dict and a loop.</p>
+          
+            <p class="pv-parsons__label">Expected output</p>
+            <pre class="pv-parsons__out">apple: 2
+banana: 1
+cherry: 3</pre>
+          
+          <div class="pv-parsons__mount"><noscript>This puzzle needs JavaScript.</noscript></div>
+          <script id="parsons-word-frequency-counter" type="application/json">{"id": "word-frequency-counter", "lines": [{"id": "word-frequency-counter-0", "text": "def count_words(sentence):", "indent": 0, "distractor": false, "feedback": "This must be the first line \u2014 it defines the function."}, {"id": "word-frequency-counter-1", "text": "freq = {}", "indent": 1, "distractor": false, "feedback": "Initialize the frequency dict at indent level 1 (inside the function)."}, {"id": "word-frequency-counter-2", "text": "for word in sentence.split():", "indent": 1, "distractor": false, "feedback": "Iterate over words \u2014 one indent level inside the function body."}, {"id": "word-frequency-counter-3", "text": "freq[word] = freq.get(word, 0) + 1", "indent": 2, "distractor": false, "feedback": "This is the body of the for-loop, so it needs 2 levels of indentation."}, {"id": "word-frequency-counter-4", "text": "for word in sorted(freq):", "indent": 1, "distractor": false, "feedback": "Second loop to print results \u2014 back to 1 level of indent."}, {"id": "word-frequency-counter-5", "text": "print(f\"{word}: {freq[word]}\")", "indent": 2, "distractor": false, "feedback": "Inside the print loop \u2014 2 levels of indent."}, {"id": "word-frequency-counter-6", "text": "sentence = \"apple banana cherry apple cherry cherry\"", "indent": 0, "distractor": false, "feedback": "Top-level call \u2014 no indentation."}, {"id": "word-frequency-counter-7", "text": "count_words(sentence)", "indent": 0, "distractor": false, "feedback": "Call the function at top level \u2014 no indentation."}, {"id": "word-frequency-counter-8", "text": "freq[word] += 1", "indent": 2, "distractor": true, "feedback": "This crashes if the key doesn't exist yet. Use freq.get() instead."}, {"id": "word-frequency-counter-9", "text": "return freq", "indent": 1, "distractor": true, "feedback": "We're printing, not returning. Remove this block."}]}</script>
+        </article>
+      
+
+      
+    
+      
+              
+        <article id="grade-classifier" class="pv-parsons" data-parsons data-payload="parsons-grade-classifier">
+          <header class="pv-parsons__head">
+            <span class="pv-parsons__num">2</span>
+            <h2 class="pv-parsons__title">Grade Classifier</h2>
+            <span class="pv-parsons__meta">Easy · Nested Conditionals</span>
+          </header>
+          <p class="pv-parsons__desc">Write a program that reads a score (0–100) and prints a grade: `A` for ≥90, `B` for ≥80, `C` for ≥70, `D` for ≥60, otherwise `F`. Then print `Pass` or `Fail` based on whether the grade is D or above.</p>
+          
+            <p class="pv-parsons__label">Expected output</p>
+            <pre class="pv-parsons__out">Grade: B
+Pass</pre>
+          
+          <div class="pv-parsons__mount"><noscript>This puzzle needs JavaScript.</noscript></div>
+          <script id="parsons-grade-classifier" type="application/json">{"id": "grade-classifier", "lines": [{"id": "grade-classifier-0", "text": "score = 85", "indent": 0, "distractor": false, "feedback": "Set the score at top level \u2014 no indentation."}, {"id": "grade-classifier-1", "text": "if score \u003E= 90:", "indent": 0, "distractor": false, "feedback": "First condition, top-level \u2014 no indentation."}, {"id": "grade-classifier-2", "text": "grade = \"A\"", "indent": 1, "distractor": false, "feedback": "Inside the if block \u2014 1 level of indent."}, {"id": "grade-classifier-3", "text": "elif score \u003E= 80:", "indent": 0, "distractor": false, "feedback": "elif must align with if \u2014 no indentation."}, {"id": "grade-classifier-4", "text": "grade = \"B\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-5", "text": "elif score \u003E= 70:", "indent": 0, "distractor": false, "feedback": "Another elif at top level \u2014 no indentation."}, {"id": "grade-classifier-6", "text": "grade = \"C\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-7", "text": "elif score \u003E= 60:", "indent": 0, "distractor": false, "feedback": "Another elif at top level \u2014 no indentation."}, {"id": "grade-classifier-8", "text": "grade = \"D\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-9", "text": "else:", "indent": 0, "distractor": false, "feedback": "else aligns with if \u2014 no indentation."}, {"id": "grade-classifier-10", "text": "grade = \"F\"", "indent": 1, "distractor": false, "feedback": "Inside else \u2014 1 level of indent."}, {"id": "grade-classifier-11", "text": "print(f\"Grade: {grade}\")", "indent": 0, "distractor": false, "feedback": "Print at top level after all branches \u2014 no indent."}, {"id": "grade-classifier-12", "text": "if grade in (\"A\",\"B\",\"C\",\"D\"):", "indent": 0, "distractor": false, "feedback": "Second if-block at top level \u2014 no indent."}, {"id": "grade-classifier-13", "text": "print(\"Pass\")", "indent": 1, "distractor": false, "feedback": "Inside the pass check \u2014 1 level of indent."}, {"id": "grade-classifier-14", "text": "else:", "indent": 0, "distractor": false, "feedback": "else for pass/fail \u2014 top level, no indent."}, {"id": "grade-classifier-15", "text": "print(\"Fail\")", "indent": 1, "distractor": false, "feedback": "Inside the else \u2014 1 level of indent."}, {"id": "grade-classifier-16", "text": "score = int(input())", "indent": 0, "distractor": true, "feedback": "We're hardcoding score = 85, not reading from input."}, {"id": "grade-classifier-17", "text": "print(grade)", "indent": 0, "distractor": true, "feedback": "Use the f-string version: print(f'Grade: {grade}')"}]}</script>
+        </article>
+      
+
+      
+    
+    
+  </div>
+
+
+        
+      </main>
+      
+        
+
+
+<footer class="mt-auto border-t-[3px] border-ink bg-bg">
+  <div class="page-container pt-7 pb-8">
+    
+    <div class="flex flex-wrap justify-between gap-10 mb-7">
+      <div class="max-w-[240px]">
+        <div class="font-black text-[18px] tracking-tight mb-2">
+          <span class="pv-wordmark">PYVERSE<i class="pv-sq" aria-hidden="true"></i></span>
+        </div>
+        <p class="font-mono text-xs text-muted leading-relaxed">PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER</p>
+      </div>
+      
+      
+    </div>
+    
+    <div class="border-t-[3px] border-ink pt-4 flex justify-between items-center flex-wrap gap-3 font-mono text-xs text-muted">
+      <span>NO SERVER, NO WAIT</span>
+      <div class="flex gap-4 items-center">
+        
+          <a href="https://github.com/uditbaliyan/pyverse"
+             target="_blank"
+             rel="noopener"
+             aria-label="GitHub"
+             class="inline-flex h-11 w-11 items-center justify-center text-muted hover:text-ink transition-colors">
+            <svg width="18"
+                 height="18"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2.5"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+      
+    
+    
+    
+    
+  
+    <script src="../../../static/js/parsons.js" defer></script>
+  
+
+    
+    
+  </body>
+</html>
