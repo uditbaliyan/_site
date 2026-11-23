@@ -44,6 +44,7 @@
 
       <link href="../../../static/css/project.css" rel="stylesheet" />
       <link href="../../../static/css/pyverse-pop.css" rel="stylesheet" />
+      <link href="../../../static/css/code-highlight.css" rel="stylesheet" />
     
     
   <link rel="stylesheet" href="../../../static/css/drills.css" />
@@ -240,28 +241,44 @@
     
     <p class="mt-4 font-mono text-[12px] text-muted">
       5 questions · page 1 of 1
-      · <span data-page-progress data-store="pv:drillquiz:solved" data-slugs="q9,q10,q11,q12,q13">0 solved on this page</span>
+      · <span data-page-progress
+       data-store="pv:drillquiz:solved"
+       data-slugs="q9,q10,q11,q12,q13">0 solved on this page</span>
     </p>
     
       
         
 
-<article id="q9" class="pv-q" data-qitem data-slug="q9">
+
+<article id="q9"
+         class="pv-q"
+         data-qitem
+         data-slug="q9">
   <header class="pv-parsons__head">
     <span class="pv-parsons__num">1</span>
     <span class="pv-parsons__meta">Python Basics: Set 1</span>
   </header>
   <p class="pv-q__text">What does this print?</p>
   <pre class="pv-parsons__out"><code>print(type(3 / 2).__name__)</code></pre>
-  <div class="pv-q__opts" role="group" aria-label="Answer options for question 1">
+  <div class="pv-q__opts"
+       role="group"
+       aria-label="Answer options for question 1">
     
-      <button type="button" class="pv-q__opt" data-correct="0">int</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">int</button>
     
-      <button type="button" class="pv-q__opt" data-correct="1">float</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="1">float</button>
     
-      <button type="button" class="pv-q__opt" data-correct="0">str</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">str</button>
     
-      <button type="button" class="pv-q__opt" data-correct="0">Fraction</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">Fraction</button>
     
   </div>
   <div class="pv-q__result" role="status" aria-live="polite" hidden>
@@ -269,7 +286,9 @@
     <p class="pv-q__why">`/` is true division and always returns a float in Python 3.</p>
     <button type="button" class="pv-q__retry">Try again</button>
   </div>
-  <noscript><p class="pv-q__why">This question needs JavaScript.</p></noscript>
+  <noscript>
+    <p class="pv-q__why">This question needs JavaScript.</p>
+  </noscript>
 </article>
 
       
@@ -277,7 +296,11 @@
       
         
 
-<article id="q10" class="pv-q" data-qitem data-slug="q10">
+
+<article id="q10"
+         class="pv-q"
+         data-qitem
+         data-slug="q10">
   <header class="pv-parsons__head">
     <span class="pv-parsons__num">2</span>
     <span class="pv-parsons__meta">Python Basics: Set 1</span>
@@ -287,15 +310,25 @@
 y = x
 y.append(4)
 x = len(x)</code></pre>
-  <div class="pv-q__opts" role="group" aria-label="Answer options for question 2">
+  <div class="pv-q__opts"
+       role="group"
+       aria-label="Answer options for question 2">
     
-      <button type="button" class="pv-q__opt" data-correct="0">3</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">3</button>
     
-      <button type="button" class="pv-q__opt" data-correct="1">4</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="1">4</button>
     
-      <button type="button" class="pv-q__opt" data-correct="0">[1, 2, 3, 4]</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">[1, 2, 3, 4]</button>
     
-      <button type="button" class="pv-q__opt" data-correct="0">None</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">None</button>
     
   </div>
   <div class="pv-q__result" role="status" aria-live="polite" hidden>
@@ -303,7 +336,9 @@ x = len(x)</code></pre>
     <p class="pv-q__why">`y` and `x` pointed at the same list, so it grew to four items before `x` was rebound to its length.</p>
     <button type="button" class="pv-q__retry">Try again</button>
   </div>
-  <noscript><p class="pv-q__why">This question needs JavaScript.</p></noscript>
+  <noscript>
+    <p class="pv-q__why">This question needs JavaScript.</p>
+  </noscript>
 </article>
 
       
@@ -311,18 +346,28 @@ x = len(x)</code></pre>
       
         
 
-<article id="q11" class="pv-q" data-qitem data-slug="q11">
+
+<article id="q11"
+         class="pv-q"
+         data-qitem
+         data-slug="q11">
   <header class="pv-parsons__head">
     <span class="pv-parsons__num">3</span>
     <span class="pv-parsons__meta">Python Basics: Set 1</span>
   </header>
   <p class="pv-q__text">`&#x27;abc&#x27;[::-1]` evaluates to `&#x27;cba&#x27;`.</p>
   
-  <div class="pv-q__opts" role="group" aria-label="Answer options for question 3">
+  <div class="pv-q__opts"
+       role="group"
+       aria-label="Answer options for question 3">
     
-      <button type="button" class="pv-q__opt" data-correct="1">True</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="1">True</button>
     
-      <button type="button" class="pv-q__opt" data-correct="0">False</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">False</button>
     
   </div>
   <div class="pv-q__result" role="status" aria-live="polite" hidden>
@@ -330,7 +375,9 @@ x = len(x)</code></pre>
     <p class="pv-q__why">A slice with step -1 walks the string backwards.</p>
     <button type="button" class="pv-q__retry">Try again</button>
   </div>
-  <noscript><p class="pv-q__why">This question needs JavaScript.</p></noscript>
+  <noscript>
+    <p class="pv-q__why">This question needs JavaScript.</p>
+  </noscript>
 </article>
 
       
@@ -338,18 +385,28 @@ x = len(x)</code></pre>
       
         
 
-<article id="q12" class="pv-q" data-qitem data-slug="q12">
+
+<article id="q12"
+         class="pv-q"
+         data-qitem
+         data-slug="q12">
   <header class="pv-parsons__head">
     <span class="pv-parsons__num">4</span>
     <span class="pv-parsons__meta">Python Basics: Set 1</span>
   </header>
   <p class="pv-q__text">Tuples can be changed in place with `t[0] = 1`.</p>
   
-  <div class="pv-q__opts" role="group" aria-label="Answer options for question 4">
+  <div class="pv-q__opts"
+       role="group"
+       aria-label="Answer options for question 4">
     
-      <button type="button" class="pv-q__opt" data-correct="0">True</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">True</button>
     
-      <button type="button" class="pv-q__opt" data-correct="1">False</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="1">False</button>
     
   </div>
   <div class="pv-q__result" role="status" aria-live="polite" hidden>
@@ -357,7 +414,9 @@ x = len(x)</code></pre>
     <p class="pv-q__why">Tuples are immutable; item assignment raises `TypeError`.</p>
     <button type="button" class="pv-q__retry">Try again</button>
   </div>
-  <noscript><p class="pv-q__why">This question needs JavaScript.</p></noscript>
+  <noscript>
+    <p class="pv-q__why">This question needs JavaScript.</p>
+  </noscript>
 </article>
 
       
@@ -365,22 +424,36 @@ x = len(x)</code></pre>
       
         
 
-<article id="q13" class="pv-q" data-qitem data-slug="q13">
+
+<article id="q13"
+         class="pv-q"
+         data-qitem
+         data-slug="q13">
   <header class="pv-parsons__head">
     <span class="pv-parsons__num">5</span>
     <span class="pv-parsons__meta">Python Basics: Set 1</span>
   </header>
   <p class="pv-q__text">Which expression is `True`?</p>
   
-  <div class="pv-q__opts" role="group" aria-label="Answer options for question 5">
+  <div class="pv-q__opts"
+       role="group"
+       aria-label="Answer options for question 5">
     
-      <button type="button" class="pv-q__opt" data-correct="0">bool([])</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">bool([])</button>
     
-      <button type="button" class="pv-q__opt" data-correct="0">bool(&#x27;&#x27;)</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">bool(&#x27;&#x27;)</button>
     
-      <button type="button" class="pv-q__opt" data-correct="1">not []</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="1">not []</button>
     
-      <button type="button" class="pv-q__opt" data-correct="0">bool(0)</button>
+      <button type="button"
+              class="pv-q__opt"
+              data-correct="0">bool(0)</button>
     
   </div>
   <div class="pv-q__result" role="status" aria-live="polite" hidden>
@@ -388,7 +461,9 @@ x = len(x)</code></pre>
     <p class="pv-q__why">An empty list is falsy, so `not []` is `True`. The others are all falsy.</p>
     <button type="button" class="pv-q__retry">Try again</button>
   </div>
-  <noscript><p class="pv-q__why">This question needs JavaScript.</p></noscript>
+  <noscript>
+    <p class="pv-q__why">This question needs JavaScript.</p>
+  </noscript>
 </article>
 
       

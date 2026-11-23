@@ -44,6 +44,7 @@
 
       <link href="../static/css/project.css" rel="stylesheet" />
       <link href="../static/css/pyverse-pop.css" rel="stylesheet" />
+      <link href="../static/css/code-highlight.css" rel="stylesheet" />
     
     
   <link rel="stylesheet" href="../static/css/practice-engine.css" />
@@ -243,9 +244,9 @@
         </div>
         <div class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card">
           <div class="font-mono text-[10px] uppercase tracking-[0.07em] text-muted mb-1.5">Available</div>
-          <div class="font-mono text-[22px] font-bold text-ink" id="stat-total">4</div>
+          <div class="font-mono text-[22px] font-bold text-ink" id="stat-total">56</div>
           <div class="font-mono text-[10.5px] text-muted mt-1">
-            across 3 topics
+            across 9 topics
           </div>
         </div>
         <div class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card">
@@ -287,7 +288,19 @@
             
               <option value="arrays-and-hashing">Arrays &amp; Hashing</option>
             
+              <option value="binary-search">Binary Search</option>
+            
+              <option value="matrix-patterns">Matrix Patterns</option>
+            
+              <option value="pattern-printing">Pattern Printing</option>
+            
+              <option value="sliding-window">Sliding Window</option>
+            
+              <option value="stack">Stack</option>
+            
               <option value="syntax">Syntax</option>
+            
+              <option value="two-pointers">Two Pointers</option>
             
               <option value="warm-up">Warm-up</option>
             
@@ -327,7 +340,7 @@
                    for="filter-pattern">Pattern</label>
             <select class="form-control font-mono !text-xs" id="filter-pattern">
               <option value="">Any pattern</option>
-              <option value="Hash Map">Hash Map</option><option value="Iteration">Iteration</option><option value="Prefix Sum">Prefix Sum</option>
+              <option value="Binary Search">Binary Search</option><option value="Bucket Sort">Bucket Sort</option><option value="Greedy">Greedy</option><option value="Hash Map">Hash Map</option><option value="Hash Set">Hash Set</option><option value="Iteration">Iteration</option><option value="Math">Math</option><option value="Matrix">Matrix</option><option value="Monotonic Stack">Monotonic Stack</option><option value="Prefix Sum">Prefix Sum</option><option value="Simulation">Simulation</option><option value="Sliding Window">Sliding Window</option><option value="Sorting">Sorting</option><option value="Stack">Stack</option><option value="Two Pointers">Two Pointers</option><option value="Voting">Voting</option>
             </select>
           </div>
         
@@ -337,7 +350,7 @@
                    for="filter-technique">Technique</label>
             <select class="form-control font-mono !text-xs" id="filter-technique">
               <option value="">Any technique</option>
-              <option value="Accumulator">Accumulator</option><option value="Builtins">Builtins</option><option value="Enumeration">Enumeration</option><option value="String Formatting">String Formatting</option>
+              <option value="Accumulator">Accumulator</option><option value="Builtins">Builtins</option><option value="Ceiling Division">Ceiling Division</option><option value="Character Codes">Character Codes</option><option value="Dict Counting">Dict Counting</option><option value="Dict Lookup">Dict Lookup</option><option value="Dict of Lists">Dict of Lists</option><option value="Early Continue">Early Continue</option><option value="Early Return">Early Return</option><option value="Enumeration">Enumeration</option><option value="Integer Division">Integer Division</option><option value="List Comprehension">List Comprehension</option><option value="List Methods">List Methods</option><option value="Modulo">Modulo</option><option value="Nested Loops">Nested Loops</option><option value="Sets">Sets</option><option value="Slicing">Slicing</option><option value="Sorting">Sorting</option><option value="Stack">Stack</option><option value="String Formatting">String Formatting</option><option value="String Methods">String Methods</option><option value="String Repetition">String Repetition</option><option value="Tuple Unpacking">Tuple Unpacking</option><option value="Type Conversion">Type Conversion</option>
             </select>
           </div>
         
@@ -370,6 +383,36 @@
           <tbody>
             
               <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="alternating-letter-grid"
+                  data-title="Alternating Letter Grid"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Matrix"
+                  data-techniques="Modulo,Nested Loops">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">1</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/alternating-letter-grid/index.html">Alternating Letter Grid</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
                   data-slug="average-of-numbers"
                   data-title="Average of Numbers"
                   data-difficulty="easy"
@@ -378,7 +421,7 @@
                   data-patterns="Iteration"
                   data-techniques="Builtins">
                 <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
-                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">1</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">2</td>
                 <td class="px-3 py-2.5">
                   <a class="font-bold text-ink no-underline hover:text-red"
                      href="../practice/problem/average-of-numbers/index.html">Average of Numbers</a>
@@ -400,6 +443,546 @@
               </tr>
             
               <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="best-time-to-buy-and-sell-stock"
+                  data-title="Best Time to Buy and Sell Stock"
+                  data-difficulty="easy"
+                  data-topic="sliding-window"
+                  data-companies=""
+                  data-patterns="Greedy,Sliding Window"
+                  data-techniques="Accumulator">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">3</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/best-time-to-buy-and-sell-stock/index.html">Best Time to Buy and Sell Stock</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/sliding-window/index.html">Sliding Window</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="binary-search"
+                  data-title="Binary Search"
+                  data-difficulty="easy"
+                  data-topic="binary-search"
+                  data-companies=""
+                  data-patterns="Binary Search"
+                  data-techniques="Integer Division">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">4</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/binary-search/index.html">Binary Search</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/binary-search/index.html">Binary Search</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="contains-duplicate"
+                  data-title="Contains Duplicate"
+                  data-difficulty="easy"
+                  data-topic="arrays-and-hashing"
+                  data-companies=""
+                  data-patterns="Hash Set"
+                  data-techniques="Sets">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">5</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/contains-duplicate/index.html">Contains Duplicate</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="count-vowels"
+                  data-title="Count Vowels"
+                  data-difficulty="easy"
+                  data-topic="warm-up"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Accumulator,Sets">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">6</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/count-vowels/index.html">Count Vowels</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/syntax/warm-up/index.html">Warm-up</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="star-diamond"
+                  data-title="Diamond of Stars"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="Slicing,String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">7</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/star-diamond/index.html">Diamond of Stars</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="fizz-buzz"
+                  data-title="Fizz Buzz"
+                  data-difficulty="easy"
+                  data-topic="warm-up"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Modulo,String Formatting">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">8</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/fizz-buzz/index.html">Fizz Buzz</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/syntax/warm-up/index.html">Warm-up</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="floyds-triangle"
+                  data-title="Floyd&#x27;s Triangle"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="Accumulator,Nested Loops,String Methods">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">9</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/floyds-triangle/index.html">Floyd&#x27;s Triangle</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="hollow-star-square"
+                  data-title="Hollow Square of Stars"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">10</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/hollow-star-square/index.html">Hollow Square of Stars</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="inverted-star-triangle"
+                  data-title="Inverted Triangle of Stars"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">11</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/inverted-star-triangle/index.html">Inverted Triangle of Stars</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="majority-element"
+                  data-title="Majority Element"
+                  data-difficulty="easy"
+                  data-topic="arrays-and-hashing"
+                  data-companies=""
+                  data-patterns="Voting"
+                  data-techniques="Accumulator">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">12</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/majority-element/index.html">Majority Element</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="maximum-sum-subarray-of-size-k"
+                  data-title="Maximum Sum Subarray of Size K"
+                  data-difficulty="easy"
+                  data-topic="sliding-window"
+                  data-companies=""
+                  data-patterns="Sliding Window"
+                  data-techniques="Builtins,Slicing">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">13</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/maximum-sum-subarray-of-size-k/index.html">Maximum Sum Subarray of Size K</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/sliding-window/index.html">Sliding Window</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="missing-number"
+                  data-title="Missing Number"
+                  data-difficulty="easy"
+                  data-topic="arrays-and-hashing"
+                  data-companies=""
+                  data-patterns="Math"
+                  data-techniques="Accumulator">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">14</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/missing-number/index.html">Missing Number</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="move-zeroes"
+                  data-title="Move Zeroes"
+                  data-difficulty="easy"
+                  data-topic="two-pointers"
+                  data-companies=""
+                  data-patterns="Two Pointers"
+                  data-techniques="Slicing,Tuple Unpacking">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">15</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/move-zeroes/index.html">Move Zeroes</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/two-pointers/index.html">Two Pointers</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="number-diamond"
+                  data-title="Number Diamond"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Accumulator,Slicing,Type Conversion">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">16</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/number-diamond/index.html">Number Diamond</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="number-pyramid"
+                  data-title="Number Pyramid"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="Accumulator,Type Conversion">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">17</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/number-pyramid/index.html">Number Pyramid</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="number-triangle"
+                  data-title="Number Triangle"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Accumulator,Type Conversion">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">18</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/number-triangle/index.html">Number Triangle</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="star-pyramid"
+                  data-title="Pyramid of Stars"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">19</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/star-pyramid/index.html">Pyramid of Stars</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="star-right-triangle"
+                  data-title="Right-Angle Triangle of Stars"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Accumulator,String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">20</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/star-right-triangle/index.html">Right-Angle Triangle of Stars</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
                   data-slug="running-sum"
                   data-title="Running Sum of 1d Array"
                   data-difficulty="easy"
@@ -408,7 +991,7 @@
                   data-patterns="Prefix Sum"
                   data-techniques="Accumulator">
                 <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
-                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">2</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">21</td>
                 <td class="px-3 py-2.5">
                   <a class="font-bold text-ink no-underline hover:text-red"
                      href="../practice/problem/running-sum/index.html">Running Sum of 1d Array</a>
@@ -430,6 +1013,126 @@
               </tr>
             
               <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="search-insert-position"
+                  data-title="Search Insert Position"
+                  data-difficulty="easy"
+                  data-topic="binary-search"
+                  data-companies=""
+                  data-patterns="Binary Search"
+                  data-techniques="Integer Division">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">22</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/search-insert-position/index.html">Search Insert Position</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/binary-search/index.html">Binary Search</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="star-square"
+                  data-title="Square of Stars"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Accumulator,String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">23</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/star-square/index.html">Square of Stars</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="sum-of-digits"
+                  data-title="Sum of Digits"
+                  data-difficulty="easy"
+                  data-topic="warm-up"
+                  data-companies=""
+                  data-patterns="Math"
+                  data-techniques="Accumulator,Modulo">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">24</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/sum-of-digits/index.html">Sum of Digits</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/syntax/warm-up/index.html">Warm-up</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="consecutive-number-triangle"
+                  data-title="Triangle of Consecutive Numbers"
+                  data-difficulty="easy"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="Accumulator,Type Conversion">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">25</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/consecutive-number-triangle/index.html">Triangle of Consecutive Numbers</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
                   data-slug="two-sum"
                   data-title="Two Sum"
                   data-difficulty="easy"
@@ -438,7 +1141,7 @@
                   data-patterns="Hash Map"
                   data-techniques="Enumeration">
                 <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
-                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">3</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">26</td>
                 <td class="px-3 py-2.5">
                   <a class="font-bold text-ink no-underline hover:text-red"
                      href="../practice/problem/two-sum/index.html">Two Sum</a>
@@ -460,6 +1163,96 @@
               </tr>
             
               <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="valid-anagram"
+                  data-title="Valid Anagram"
+                  data-difficulty="easy"
+                  data-topic="arrays-and-hashing"
+                  data-companies=""
+                  data-patterns="Hash Map"
+                  data-techniques="Dict Counting">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">27</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/valid-anagram/index.html">Valid Anagram</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="valid-palindrome"
+                  data-title="Valid Palindrome"
+                  data-difficulty="easy"
+                  data-topic="two-pointers"
+                  data-companies=""
+                  data-patterns="Two Pointers"
+                  data-techniques="String Methods">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">28</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/valid-palindrome/index.html">Valid Palindrome</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/two-pointers/index.html">Two Pointers</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="valid-parentheses"
+                  data-title="Valid Parentheses"
+                  data-difficulty="easy"
+                  data-topic="stack"
+                  data-companies=""
+                  data-patterns="Stack"
+                  data-techniques="Dict Lookup,Early Return">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">29</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/valid-parentheses/index.html">Valid Parentheses</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/stack/index.html">Stack</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
                   data-slug="print-hello-world"
                   data-title="print hello world"
                   data-difficulty="easy"
@@ -468,7 +1261,7 @@
                   data-patterns=""
                   data-techniques="String Formatting">
                 <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
-                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">4</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">30</td>
                 <td class="px-3 py-2.5">
                   <a class="font-bold text-ink no-underline hover:text-red"
                      href="../practice/problem/print-hello-world/index.html">print hello world</a>
@@ -489,15 +1282,795 @@
                 </td>
               </tr>
             
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="three-sum"
+                  data-title="3Sum"
+                  data-difficulty="medium"
+                  data-topic="two-pointers"
+                  data-companies=""
+                  data-patterns="Sorting,Two Pointers"
+                  data-techniques="Early Continue,Sorting">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">31</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/three-sum/index.html">3Sum</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/two-pointers/index.html">Two Pointers</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="alternating-bits-grid"
+                  data-title="Alternating 0 and 1 Grid"
+                  data-difficulty="medium"
+                  data-topic="matrix-patterns"
+                  data-companies=""
+                  data-patterns="Iteration,Matrix"
+                  data-techniques="Modulo,Nested Loops">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">32</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/alternating-bits-grid/index.html">Alternating 0 and 1 Grid</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/matrix-patterns/index.html">Matrix Patterns</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="checkerboard-grid"
+                  data-title="Checkerboard Pattern"
+                  data-difficulty="medium"
+                  data-topic="matrix-patterns"
+                  data-companies=""
+                  data-patterns="Iteration,Matrix"
+                  data-techniques="Modulo,Nested Loops">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">33</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/checkerboard-grid/index.html">Checkerboard Pattern</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/matrix-patterns/index.html">Matrix Patterns</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="container-with-most-water"
+                  data-title="Container With Most Water"
+                  data-difficulty="medium"
+                  data-topic="two-pointers"
+                  data-companies=""
+                  data-patterns="Greedy,Two Pointers"
+                  data-techniques="Builtins">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">34</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/container-with-most-water/index.html">Container With Most Water</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/two-pointers/index.html">Two Pointers</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="daily-temperatures"
+                  data-title="Daily Temperatures"
+                  data-difficulty="medium"
+                  data-topic="stack"
+                  data-companies=""
+                  data-patterns="Monotonic Stack"
+                  data-techniques="Enumeration,Stack">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">35</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/daily-temperatures/index.html">Daily Temperatures</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/stack/index.html">Stack</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="evaluate-reverse-polish-notation"
+                  data-title="Evaluate Reverse Polish Notation"
+                  data-difficulty="medium"
+                  data-topic="stack"
+                  data-companies=""
+                  data-patterns="Stack"
+                  data-techniques="Stack,Type Conversion">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">36</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/evaluate-reverse-polish-notation/index.html">Evaluate Reverse Polish Notation</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/stack/index.html">Stack</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="consecutive-number-grid"
+                  data-title="Grid of Consecutive Numbers"
+                  data-difficulty="medium"
+                  data-topic="matrix-patterns"
+                  data-companies=""
+                  data-patterns="Iteration,Matrix"
+                  data-techniques="Accumulator,Nested Loops,String Methods">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">37</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/consecutive-number-grid/index.html">Grid of Consecutive Numbers</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/matrix-patterns/index.html">Matrix Patterns</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="group-anagrams"
+                  data-title="Group Anagrams"
+                  data-difficulty="medium"
+                  data-topic="arrays-and-hashing"
+                  data-companies=""
+                  data-patterns="Hash Map"
+                  data-techniques="Dict of Lists,Sorting">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">38</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/group-anagrams/index.html">Group Anagrams</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="hollow-letter-triangle"
+                  data-title="Hollow Letter Triangle"
+                  data-difficulty="medium"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="Character Codes,String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">39</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/hollow-letter-triangle/index.html">Hollow Letter Triangle</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="inverted-letter-triangle"
+                  data-title="Inverted Letter Triangle"
+                  data-difficulty="medium"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="Character Codes,String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">40</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/inverted-letter-triangle/index.html">Inverted Letter Triangle</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="koko-eating-bananas"
+                  data-title="Koko Eating Bananas"
+                  data-difficulty="medium"
+                  data-topic="binary-search"
+                  data-companies=""
+                  data-patterns="Binary Search"
+                  data-techniques="Ceiling Division">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">41</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/koko-eating-bananas/index.html">Koko Eating Bananas</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/binary-search/index.html">Binary Search</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="letter-pyramid"
+                  data-title="Letter Pyramid"
+                  data-difficulty="medium"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="Slicing,String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">42</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/letter-pyramid/index.html">Letter Pyramid</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="letter-triangle"
+                  data-title="Letter Triangle"
+                  data-difficulty="medium"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Character Codes,String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">43</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/letter-triangle/index.html">Letter Triangle</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="spaced-letter-triangle"
+                  data-title="Letter Triangle with Spaces"
+                  data-difficulty="medium"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Character Codes,Nested Loops,String Methods">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">44</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/spaced-letter-triangle/index.html">Letter Triangle with Spaces</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="packed-letter-triangle"
+                  data-title="Letter Triangle without Spaces"
+                  data-difficulty="medium"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration"
+                  data-techniques="Accumulator,Character Codes,Nested Loops">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">45</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/packed-letter-triangle/index.html">Letter Triangle without Spaces</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="longest-consecutive-sequence"
+                  data-title="Longest Consecutive Sequence"
+                  data-difficulty="medium"
+                  data-topic="arrays-and-hashing"
+                  data-companies=""
+                  data-patterns="Hash Set"
+                  data-techniques="Sets">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">46</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/longest-consecutive-sequence/index.html">Longest Consecutive Sequence</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="longest-substring-without-repeating-characters"
+                  data-title="Longest Substring Without Repeating Characters"
+                  data-difficulty="medium"
+                  data-topic="sliding-window"
+                  data-companies=""
+                  data-patterns="Hash Map,Sliding Window"
+                  data-techniques="Dict Lookup,Enumeration">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">47</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/longest-substring-without-repeating-characters/index.html">Longest Substring Without Repeating Characters</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/sliding-window/index.html">Sliding Window</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="number-border-frame"
+                  data-title="Number Frame"
+                  data-difficulty="medium"
+                  data-topic="matrix-patterns"
+                  data-companies=""
+                  data-patterns="Iteration,Matrix"
+                  data-techniques="Accumulator,String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">48</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/number-border-frame/index.html">Number Frame</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/matrix-patterns/index.html">Matrix Patterns</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="pascals-triangle"
+                  data-title="Pascal&#x27;s Triangle"
+                  data-difficulty="medium"
+                  data-topic="matrix-patterns"
+                  data-companies=""
+                  data-patterns="Iteration,Matrix"
+                  data-techniques="List Comprehension,Nested Loops">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">49</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/pascals-triangle/index.html">Pascal&#x27;s Triangle</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/matrix-patterns/index.html">Matrix Patterns</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="product-of-array-except-self"
+                  data-title="Product of Array Except Self"
+                  data-difficulty="medium"
+                  data-topic="arrays-and-hashing"
+                  data-companies=""
+                  data-patterns="Prefix Sum"
+                  data-techniques="Accumulator">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">50</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/product-of-array-except-self/index.html">Product of Array Except Self</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="growing-star-rows"
+                  data-title="Rows of Growing Stars"
+                  data-difficulty="medium"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="String Repetition">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">51</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/growing-star-rows/index.html">Rows of Growing Stars</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="snake-matrix"
+                  data-title="Snake Matrix"
+                  data-difficulty="medium"
+                  data-topic="matrix-patterns"
+                  data-companies=""
+                  data-patterns="Iteration,Matrix"
+                  data-techniques="List Methods,Modulo">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">52</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/snake-matrix/index.html">Snake Matrix</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/matrix-patterns/index.html">Matrix Patterns</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="star-hourglass"
+                  data-title="Star Hourglass"
+                  data-difficulty="medium"
+                  data-topic="pattern-printing"
+                  data-companies=""
+                  data-patterns="Iteration,Math"
+                  data-techniques="Slicing,String Methods">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">53</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/star-hourglass/index.html">Star Hourglass</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/pattern-printing/index.html">Pattern Printing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="top-k-frequent-elements"
+                  data-title="Top K Frequent Elements"
+                  data-difficulty="medium"
+                  data-topic="arrays-and-hashing"
+                  data-companies=""
+                  data-patterns="Bucket Sort,Hash Map"
+                  data-techniques="Dict Counting,List Comprehension">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">54</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/top-k-frequent-elements/index.html">Top K Frequent Elements</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="two-sum-ii-sorted"
+                  data-title="Two Sum II – Sorted Input"
+                  data-difficulty="medium"
+                  data-topic="two-pointers"
+                  data-companies=""
+                  data-patterns="Two Pointers"
+                  data-techniques="Tuple Unpacking">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">55</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/two-sum-ii-sorted/index.html">Two Sum II – Sorted Input</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/two-pointers/index.html">Two Pointers</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
+              <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                  data-slug="spiral-matrix"
+                  data-title="Spiral Matrix"
+                  data-difficulty="hard"
+                  data-topic="matrix-patterns"
+                  data-companies=""
+                  data-patterns="Matrix,Simulation"
+                  data-techniques="Nested Loops,Tuple Unpacking">
+                <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted">56</td>
+                <td class="px-3 py-2.5">
+                  <a class="font-bold text-ink no-underline hover:text-red"
+                     href="../practice/problem/spiral-matrix/index.html">Spiral Matrix</a>
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class="pe-badge diff-hard !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Hard</span>
+                </td>
+                <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                    data-status-label
+                    data-status="todo">unsolved</td>
+                <td class="px-3 py-2.5">
+                  <div class="flex flex-wrap gap-1.5">
+                    
+                      <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                         href="../practice/matrix-patterns/index.html">Matrix Patterns</a>
+                    
+                  </div>
+                </td>
+              </tr>
+            
           </tbody>
         </table>
       </div>
       <div class="mt-2.5 px-0.5 font-mono text-[11px] text-muted"
-           id="table-count">4 problems</div>
+           id="table-count">56 problems</div>
       
       <div class="mt-9 mb-5 flex items-baseline gap-3.5">
         <h2 class="font-black text-[28px] tracking-tight" id="tracks">Tracks</h2>
-        <span class="font-mono text-[13px] text-muted">03 loaded</span>
+        <span class="font-mono text-[13px] text-muted">09 loaded</span>
       </div>
       <p class="mt-3 mb-5 max-w-[65ch] text-[13.5px] leading-relaxed text-body-txt">
         Drill one topic at a time, difficulty ascending.
@@ -510,13 +2083,191 @@
             
               <span class="pe-hidden" data-slug="average-of-numbers"></span>
             
+              <span class="pe-hidden" data-slug="contains-duplicate"></span>
+            
+              <span class="pe-hidden" data-slug="majority-element"></span>
+            
+              <span class="pe-hidden" data-slug="missing-number"></span>
+            
               <span class="pe-hidden" data-slug="running-sum"></span>
             
               <span class="pe-hidden" data-slug="two-sum"></span>
             
+              <span class="pe-hidden" data-slug="valid-anagram"></span>
+            
+              <span class="pe-hidden" data-slug="group-anagrams"></span>
+            
+              <span class="pe-hidden" data-slug="longest-consecutive-sequence"></span>
+            
+              <span class="pe-hidden" data-slug="product-of-array-except-self"></span>
+            
+              <span class="pe-hidden" data-slug="top-k-frequent-elements"></span>
+            
             <div class="font-black text-[17px] tracking-tight mb-1.5">Arrays &amp; Hashing</div>
             
               <div class="text-[12.5px] leading-relaxed text-body-txt mb-3">Indexing, counting and the hash map — the two tools behind most easy and medium interview problems.</div>
+            
+            <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
+              <span>11 problems</span>
+              <span data-progress-label>0/0</span>
+            </div>
+            
+            
+            <div class="pe-bar">
+              <span data-progress-bar style="width: 0%"></span>
+            </div>
+            
+          </a>
+        
+          <a class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-card-h transition-all duration-100 no-underline text-ink block"
+             href="../practice/binary-search/index.html"
+             data-progress-scope>
+            
+              <span class="pe-hidden" data-slug="binary-search"></span>
+            
+              <span class="pe-hidden" data-slug="search-insert-position"></span>
+            
+              <span class="pe-hidden" data-slug="koko-eating-bananas"></span>
+            
+            <div class="font-black text-[17px] tracking-tight mb-1.5">Binary Search</div>
+            
+            <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
+              <span>3 problems</span>
+              <span data-progress-label>0/0</span>
+            </div>
+            
+            
+            <div class="pe-bar">
+              <span data-progress-bar style="width: 0%"></span>
+            </div>
+            
+          </a>
+        
+          <a class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-card-h transition-all duration-100 no-underline text-ink block"
+             href="../practice/matrix-patterns/index.html"
+             data-progress-scope>
+            
+              <span class="pe-hidden" data-slug="alternating-bits-grid"></span>
+            
+              <span class="pe-hidden" data-slug="checkerboard-grid"></span>
+            
+              <span class="pe-hidden" data-slug="consecutive-number-grid"></span>
+            
+              <span class="pe-hidden" data-slug="number-border-frame"></span>
+            
+              <span class="pe-hidden" data-slug="pascals-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="snake-matrix"></span>
+            
+              <span class="pe-hidden" data-slug="spiral-matrix"></span>
+            
+            <div class="font-black text-[17px] tracking-tight mb-1.5">Matrix Patterns</div>
+            
+            <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
+              <span>7 problems</span>
+              <span data-progress-label>0/0</span>
+            </div>
+            
+            
+            <div class="pe-bar">
+              <span data-progress-bar style="width: 0%"></span>
+            </div>
+            
+          </a>
+        
+          <a class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-card-h transition-all duration-100 no-underline text-ink block"
+             href="../practice/pattern-printing/index.html"
+             data-progress-scope>
+            
+              <span class="pe-hidden" data-slug="alternating-letter-grid"></span>
+            
+              <span class="pe-hidden" data-slug="star-diamond"></span>
+            
+              <span class="pe-hidden" data-slug="floyds-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="hollow-star-square"></span>
+            
+              <span class="pe-hidden" data-slug="inverted-star-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="number-diamond"></span>
+            
+              <span class="pe-hidden" data-slug="number-pyramid"></span>
+            
+              <span class="pe-hidden" data-slug="number-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="star-pyramid"></span>
+            
+              <span class="pe-hidden" data-slug="star-right-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="star-square"></span>
+            
+              <span class="pe-hidden" data-slug="consecutive-number-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="hollow-letter-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="inverted-letter-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="letter-pyramid"></span>
+            
+              <span class="pe-hidden" data-slug="letter-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="spaced-letter-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="packed-letter-triangle"></span>
+            
+              <span class="pe-hidden" data-slug="growing-star-rows"></span>
+            
+              <span class="pe-hidden" data-slug="star-hourglass"></span>
+            
+            <div class="font-black text-[17px] tracking-tight mb-1.5">Pattern Printing</div>
+            
+            <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
+              <span>20 problems</span>
+              <span data-progress-label>0/0</span>
+            </div>
+            
+            
+            <div class="pe-bar">
+              <span data-progress-bar style="width: 0%"></span>
+            </div>
+            
+          </a>
+        
+          <a class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-card-h transition-all duration-100 no-underline text-ink block"
+             href="../practice/sliding-window/index.html"
+             data-progress-scope>
+            
+              <span class="pe-hidden" data-slug="best-time-to-buy-and-sell-stock"></span>
+            
+              <span class="pe-hidden" data-slug="maximum-sum-subarray-of-size-k"></span>
+            
+              <span class="pe-hidden" data-slug="longest-substring-without-repeating-characters"></span>
+            
+            <div class="font-black text-[17px] tracking-tight mb-1.5">Sliding Window</div>
+            
+            <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
+              <span>3 problems</span>
+              <span data-progress-label>0/0</span>
+            </div>
+            
+            
+            <div class="pe-bar">
+              <span data-progress-bar style="width: 0%"></span>
+            </div>
+            
+          </a>
+        
+          <a class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-card-h transition-all duration-100 no-underline text-ink block"
+             href="../practice/stack/index.html"
+             data-progress-scope>
+            
+              <span class="pe-hidden" data-slug="valid-parentheses"></span>
+            
+              <span class="pe-hidden" data-slug="daily-temperatures"></span>
+            
+              <span class="pe-hidden" data-slug="evaluate-reverse-polish-notation"></span>
+            
+            <div class="font-black text-[17px] tracking-tight mb-1.5">Stack</div>
             
             <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
               <span>3 problems</span>
@@ -534,6 +2285,12 @@
              href="../practice/syntax/index.html"
              data-progress-scope>
             
+              <span class="pe-hidden" data-slug="count-vowels"></span>
+            
+              <span class="pe-hidden" data-slug="fizz-buzz"></span>
+            
+              <span class="pe-hidden" data-slug="sum-of-digits"></span>
+            
               <span class="pe-hidden" data-slug="print-hello-world"></span>
             
             <div class="font-black text-[17px] tracking-tight mb-1.5">Syntax</div>
@@ -541,7 +2298,35 @@
               <div class="text-[12.5px] leading-relaxed text-body-txt mb-3">Before algorithms, the basics: writing a function, taking arguments, returning a value. These problems are de…</div>
             
             <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
-              <span>1 problem</span>
+              <span>4 problems</span>
+              <span data-progress-label>0/0</span>
+            </div>
+            
+            
+            <div class="pe-bar">
+              <span data-progress-bar style="width: 0%"></span>
+            </div>
+            
+          </a>
+        
+          <a class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-card-h transition-all duration-100 no-underline text-ink block"
+             href="../practice/two-pointers/index.html"
+             data-progress-scope>
+            
+              <span class="pe-hidden" data-slug="move-zeroes"></span>
+            
+              <span class="pe-hidden" data-slug="valid-palindrome"></span>
+            
+              <span class="pe-hidden" data-slug="three-sum"></span>
+            
+              <span class="pe-hidden" data-slug="container-with-most-water"></span>
+            
+              <span class="pe-hidden" data-slug="two-sum-ii-sorted"></span>
+            
+            <div class="font-black text-[17px] tracking-tight mb-1.5">Two Pointers</div>
+            
+            <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
+              <span>5 problems</span>
               <span data-progress-label>0/0</span>
             </div>
             
@@ -556,6 +2341,12 @@
              href="../practice/syntax/warm-up/index.html"
              data-progress-scope>
             
+              <span class="pe-hidden" data-slug="count-vowels"></span>
+            
+              <span class="pe-hidden" data-slug="fizz-buzz"></span>
+            
+              <span class="pe-hidden" data-slug="sum-of-digits"></span>
+            
               <span class="pe-hidden" data-slug="print-hello-world"></span>
             
             <div class="font-black text-[17px] tracking-tight mb-1.5">Warm-up</div>
@@ -563,7 +2354,7 @@
               <div class="text-[12.5px] leading-relaxed text-body-txt mb-3">One tiny exercise: call it the smoke test for the whole practice setup.</div>
             
             <div class="font-mono text-[10.5px] text-muted flex gap-2.5 flex-wrap">
-              <span>1 problem</span>
+              <span>4 problems</span>
               <span data-progress-label>0/0</span>
             </div>
             

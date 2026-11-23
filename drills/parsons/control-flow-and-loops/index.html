@@ -44,6 +44,7 @@
 
       <link href="../../../static/css/project.css" rel="stylesheet" />
       <link href="../../../static/css/pyverse-pop.css" rel="stylesheet" />
+      <link href="../../../static/css/code-highlight.css" rel="stylesheet" />
     
     
   <link rel="stylesheet" href="../../../static/css/drills.css" />
@@ -240,49 +241,61 @@
     
     <p class="mt-4 font-mono text-[12px] text-muted">
       2 puzzles · page 1 of 1
-      · <span data-page-progress data-store="pv:parsons:solved" data-slugs="word-frequency-counter,grade-classifier">0 solved on this page</span>
+      · <span data-page-progress
+       data-store="pv:parsons:solved"
+       data-slugs="word-frequency-counter,grade-classifier">0 solved on this page</span>
     </p>
     
       
-              
-        <article id="word-frequency-counter" class="pv-parsons" data-parsons data-payload="parsons-word-frequency-counter">
-          <header class="pv-parsons__head">
-            <span class="pv-parsons__num">1</span>
-            <h2 class="pv-parsons__title">Word Frequency Counter</h2>
-            <span class="pv-parsons__meta">Medium · Dictionary Iteration</span>
-          </header>
-          <p class="pv-parsons__desc">Build a function that counts word frequencies in a sentence and prints each word with its count in `word: count` format, sorted alphabetically. Use a dict and a loop.</p>
-          
-            <p class="pv-parsons__label">Expected output</p>
-            <pre class="pv-parsons__out">apple: 2
+        
+  <article id="word-frequency-counter"
+           class="pv-parsons"
+           data-parsons
+           data-payload="parsons-word-frequency-counter">
+    <header class="pv-parsons__head">
+      <span class="pv-parsons__num">1</span>
+      <h2 class="pv-parsons__title">Word Frequency Counter</h2>
+      <span class="pv-parsons__meta">Medium · Dictionary Iteration</span>
+    </header>
+    <p class="pv-parsons__desc">Build a function that counts word frequencies in a sentence and prints each word with its count in `word: count` format, sorted alphabetically. Use a dict and a loop.</p>
+    
+      <p class="pv-parsons__label">Expected output</p>
+      <pre class="pv-parsons__out">apple: 2
 banana: 1
 cherry: 3</pre>
-          
-          <div class="pv-parsons__mount"><noscript>This puzzle needs JavaScript.</noscript></div>
-          <script id="parsons-word-frequency-counter" type="application/json">{"id": "word-frequency-counter", "lines": [{"id": "word-frequency-counter-0", "text": "def count_words(sentence):", "indent": 0, "distractor": false, "feedback": "This must be the first line \u2014 it defines the function."}, {"id": "word-frequency-counter-1", "text": "freq = {}", "indent": 1, "distractor": false, "feedback": "Initialize the frequency dict at indent level 1 (inside the function)."}, {"id": "word-frequency-counter-2", "text": "for word in sentence.split():", "indent": 1, "distractor": false, "feedback": "Iterate over words \u2014 one indent level inside the function body."}, {"id": "word-frequency-counter-3", "text": "freq[word] = freq.get(word, 0) + 1", "indent": 2, "distractor": false, "feedback": "This is the body of the for-loop, so it needs 2 levels of indentation."}, {"id": "word-frequency-counter-4", "text": "for word in sorted(freq):", "indent": 1, "distractor": false, "feedback": "Second loop to print results \u2014 back to 1 level of indent."}, {"id": "word-frequency-counter-5", "text": "print(f\"{word}: {freq[word]}\")", "indent": 2, "distractor": false, "feedback": "Inside the print loop \u2014 2 levels of indent."}, {"id": "word-frequency-counter-6", "text": "sentence = \"apple banana cherry apple cherry cherry\"", "indent": 0, "distractor": false, "feedback": "Top-level call \u2014 no indentation."}, {"id": "word-frequency-counter-7", "text": "count_words(sentence)", "indent": 0, "distractor": false, "feedback": "Call the function at top level \u2014 no indentation."}, {"id": "word-frequency-counter-8", "text": "freq[word] += 1", "indent": 2, "distractor": true, "feedback": "This crashes if the key doesn't exist yet. Use freq.get() instead."}, {"id": "word-frequency-counter-9", "text": "return freq", "indent": 1, "distractor": true, "feedback": "We're printing, not returning. Remove this block."}]}</script>
-        </article>
-      
+    
+    <div class="pv-parsons__mount">
+      <noscript>This puzzle needs JavaScript.</noscript>
+    </div>
+    <script id="parsons-word-frequency-counter" type="application/json">{"id": "word-frequency-counter", "lines": [{"id": "word-frequency-counter-0", "text": "def count_words(sentence):", "indent": 0, "distractor": false, "feedback": "This must be the first line \u2014 it defines the function."}, {"id": "word-frequency-counter-1", "text": "freq = {}", "indent": 1, "distractor": false, "feedback": "Initialize the frequency dict at indent level 1 (inside the function)."}, {"id": "word-frequency-counter-2", "text": "for word in sentence.split():", "indent": 1, "distractor": false, "feedback": "Iterate over words \u2014 one indent level inside the function body."}, {"id": "word-frequency-counter-3", "text": "freq[word] = freq.get(word, 0) + 1", "indent": 2, "distractor": false, "feedback": "This is the body of the for-loop, so it needs 2 levels of indentation."}, {"id": "word-frequency-counter-4", "text": "for word in sorted(freq):", "indent": 1, "distractor": false, "feedback": "Second loop to print results \u2014 back to 1 level of indent."}, {"id": "word-frequency-counter-5", "text": "print(f\"{word}: {freq[word]}\")", "indent": 2, "distractor": false, "feedback": "Inside the print loop \u2014 2 levels of indent."}, {"id": "word-frequency-counter-6", "text": "sentence = \"apple banana cherry apple cherry cherry\"", "indent": 0, "distractor": false, "feedback": "Top-level call \u2014 no indentation."}, {"id": "word-frequency-counter-7", "text": "count_words(sentence)", "indent": 0, "distractor": false, "feedback": "Call the function at top level \u2014 no indentation."}, {"id": "word-frequency-counter-8", "text": "freq[word] += 1", "indent": 2, "distractor": true, "feedback": "This crashes if the key doesn't exist yet. Use freq.get() instead."}, {"id": "word-frequency-counter-9", "text": "return freq", "indent": 1, "distractor": true, "feedback": "We're printing, not returning. Remove this block."}]}</script>
+  </article>
+
 
       
     
       
-              
-        <article id="grade-classifier" class="pv-parsons" data-parsons data-payload="parsons-grade-classifier">
-          <header class="pv-parsons__head">
-            <span class="pv-parsons__num">2</span>
-            <h2 class="pv-parsons__title">Grade Classifier</h2>
-            <span class="pv-parsons__meta">Easy · Nested Conditionals</span>
-          </header>
-          <p class="pv-parsons__desc">Write a program that reads a score (0–100) and prints a grade: `A` for ≥90, `B` for ≥80, `C` for ≥70, `D` for ≥60, otherwise `F`. Then print `Pass` or `Fail` based on whether the grade is D or above.</p>
-          
-            <p class="pv-parsons__label">Expected output</p>
-            <pre class="pv-parsons__out">Grade: B
+        
+  <article id="grade-classifier"
+           class="pv-parsons"
+           data-parsons
+           data-payload="parsons-grade-classifier">
+    <header class="pv-parsons__head">
+      <span class="pv-parsons__num">2</span>
+      <h2 class="pv-parsons__title">Grade Classifier</h2>
+      <span class="pv-parsons__meta">Easy · Nested Conditionals</span>
+    </header>
+    <p class="pv-parsons__desc">Write a program that reads a score (0–100) and prints a grade: `A` for ≥90, `B` for ≥80, `C` for ≥70, `D` for ≥60, otherwise `F`. Then print `Pass` or `Fail` based on whether the grade is D or above.</p>
+    
+      <p class="pv-parsons__label">Expected output</p>
+      <pre class="pv-parsons__out">Grade: B
 Pass</pre>
-          
-          <div class="pv-parsons__mount"><noscript>This puzzle needs JavaScript.</noscript></div>
-          <script id="parsons-grade-classifier" type="application/json">{"id": "grade-classifier", "lines": [{"id": "grade-classifier-0", "text": "score = 85", "indent": 0, "distractor": false, "feedback": "Set the score at top level \u2014 no indentation."}, {"id": "grade-classifier-1", "text": "if score \u003E= 90:", "indent": 0, "distractor": false, "feedback": "First condition, top-level \u2014 no indentation."}, {"id": "grade-classifier-2", "text": "grade = \"A\"", "indent": 1, "distractor": false, "feedback": "Inside the if block \u2014 1 level of indent."}, {"id": "grade-classifier-3", "text": "elif score \u003E= 80:", "indent": 0, "distractor": false, "feedback": "elif must align with if \u2014 no indentation."}, {"id": "grade-classifier-4", "text": "grade = \"B\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-5", "text": "elif score \u003E= 70:", "indent": 0, "distractor": false, "feedback": "Another elif at top level \u2014 no indentation."}, {"id": "grade-classifier-6", "text": "grade = \"C\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-7", "text": "elif score \u003E= 60:", "indent": 0, "distractor": false, "feedback": "Another elif at top level \u2014 no indentation."}, {"id": "grade-classifier-8", "text": "grade = \"D\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-9", "text": "else:", "indent": 0, "distractor": false, "feedback": "else aligns with if \u2014 no indentation."}, {"id": "grade-classifier-10", "text": "grade = \"F\"", "indent": 1, "distractor": false, "feedback": "Inside else \u2014 1 level of indent."}, {"id": "grade-classifier-11", "text": "print(f\"Grade: {grade}\")", "indent": 0, "distractor": false, "feedback": "Print at top level after all branches \u2014 no indent."}, {"id": "grade-classifier-12", "text": "if grade in (\"A\",\"B\",\"C\",\"D\"):", "indent": 0, "distractor": false, "feedback": "Second if-block at top level \u2014 no indent."}, {"id": "grade-classifier-13", "text": "print(\"Pass\")", "indent": 1, "distractor": false, "feedback": "Inside the pass check \u2014 1 level of indent."}, {"id": "grade-classifier-14", "text": "else:", "indent": 0, "distractor": false, "feedback": "else for pass/fail \u2014 top level, no indent."}, {"id": "grade-classifier-15", "text": "print(\"Fail\")", "indent": 1, "distractor": false, "feedback": "Inside the else \u2014 1 level of indent."}, {"id": "grade-classifier-16", "text": "score = int(input())", "indent": 0, "distractor": true, "feedback": "We're hardcoding score = 85, not reading from input."}, {"id": "grade-classifier-17", "text": "print(grade)", "indent": 0, "distractor": true, "feedback": "Use the f-string version: print(f'Grade: {grade}')"}]}</script>
-        </article>
-      
+    
+    <div class="pv-parsons__mount">
+      <noscript>This puzzle needs JavaScript.</noscript>
+    </div>
+    <script id="parsons-grade-classifier" type="application/json">{"id": "grade-classifier", "lines": [{"id": "grade-classifier-0", "text": "score = 85", "indent": 0, "distractor": false, "feedback": "Set the score at top level \u2014 no indentation."}, {"id": "grade-classifier-1", "text": "if score \u003E= 90:", "indent": 0, "distractor": false, "feedback": "First condition, top-level \u2014 no indentation."}, {"id": "grade-classifier-2", "text": "grade = \"A\"", "indent": 1, "distractor": false, "feedback": "Inside the if block \u2014 1 level of indent."}, {"id": "grade-classifier-3", "text": "elif score \u003E= 80:", "indent": 0, "distractor": false, "feedback": "elif must align with if \u2014 no indentation."}, {"id": "grade-classifier-4", "text": "grade = \"B\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-5", "text": "elif score \u003E= 70:", "indent": 0, "distractor": false, "feedback": "Another elif at top level \u2014 no indentation."}, {"id": "grade-classifier-6", "text": "grade = \"C\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-7", "text": "elif score \u003E= 60:", "indent": 0, "distractor": false, "feedback": "Another elif at top level \u2014 no indentation."}, {"id": "grade-classifier-8", "text": "grade = \"D\"", "indent": 1, "distractor": false, "feedback": "Inside elif \u2014 1 level of indent."}, {"id": "grade-classifier-9", "text": "else:", "indent": 0, "distractor": false, "feedback": "else aligns with if \u2014 no indentation."}, {"id": "grade-classifier-10", "text": "grade = \"F\"", "indent": 1, "distractor": false, "feedback": "Inside else \u2014 1 level of indent."}, {"id": "grade-classifier-11", "text": "print(f\"Grade: {grade}\")", "indent": 0, "distractor": false, "feedback": "Print at top level after all branches \u2014 no indent."}, {"id": "grade-classifier-12", "text": "if grade in (\"A\",\"B\",\"C\",\"D\"):", "indent": 0, "distractor": false, "feedback": "Second if-block at top level \u2014 no indent."}, {"id": "grade-classifier-13", "text": "print(\"Pass\")", "indent": 1, "distractor": false, "feedback": "Inside the pass check \u2014 1 level of indent."}, {"id": "grade-classifier-14", "text": "else:", "indent": 0, "distractor": false, "feedback": "else for pass/fail \u2014 top level, no indent."}, {"id": "grade-classifier-15", "text": "print(\"Fail\")", "indent": 1, "distractor": false, "feedback": "Inside the else \u2014 1 level of indent."}, {"id": "grade-classifier-16", "text": "score = int(input())", "indent": 0, "distractor": true, "feedback": "We're hardcoding score = 85, not reading from input."}, {"id": "grade-classifier-17", "text": "print(grade)", "indent": 0, "distractor": true, "feedback": "Use the f-string version: print(f'Grade: {grade}')"}]}</script>
+  </article>
+
 
       
     

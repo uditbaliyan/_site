@@ -44,6 +44,7 @@
 
       <link href="../../../static/css/project.css" rel="stylesheet" />
       <link href="../../../static/css/pyverse-pop.css" rel="stylesheet" />
+      <link href="../../../static/css/code-highlight.css" rel="stylesheet" />
     
     
   <link rel="stylesheet" href="../../../static/css/drills.css" />
@@ -240,31 +241,38 @@
     
     <p class="mt-4 font-mono text-[12px] text-muted">
       1 puzzle · page 1 of 1
-      · <span data-page-progress data-store="pv:parsons:solved" data-slugs="pythagorean-triples-finder">0 solved on this page</span>
+      · <span data-page-progress
+       data-store="pv:parsons:solved"
+       data-slugs="pythagorean-triples-finder">0 solved on this page</span>
     </p>
     
       
-              
-        <article id="pythagorean-triples-finder" class="pv-parsons" data-parsons data-payload="parsons-pythagorean-triples-finder">
-          <header class="pv-parsons__head">
-            <span class="pv-parsons__num">1</span>
-            <h2 class="pv-parsons__title">Pythagorean Triples Finder</h2>
-            <span class="pv-parsons__meta">Medium · List Comprehension + Filter</span>
-          </header>
-          <p class="pv-parsons__desc">Use a list comprehension to find all Pythagorean triples `(a, b, c)` where `a &amp;lt; b &amp;lt; c`, all values are in range 1–20, and `a² + b² == c²`. Print each triple on its own line.</p>
-          
-            <p class="pv-parsons__label">Expected output</p>
-            <pre class="pv-parsons__out">(3, 4, 5)
+        
+  <article id="pythagorean-triples-finder"
+           class="pv-parsons"
+           data-parsons
+           data-payload="parsons-pythagorean-triples-finder">
+    <header class="pv-parsons__head">
+      <span class="pv-parsons__num">1</span>
+      <h2 class="pv-parsons__title">Pythagorean Triples Finder</h2>
+      <span class="pv-parsons__meta">Medium · List Comprehension + Filter</span>
+    </header>
+    <p class="pv-parsons__desc">Use a list comprehension to find all Pythagorean triples `(a, b, c)` where `a &amp;lt; b &amp;lt; c`, all values are in range 1–20, and `a² + b² == c²`. Print each triple on its own line.</p>
+    
+      <p class="pv-parsons__label">Expected output</p>
+      <pre class="pv-parsons__out">(3, 4, 5)
 (5, 12, 13)
 (6, 8, 10)
 (8, 15, 17)
 (9, 12, 15)
 (12, 16, 20)</pre>
-          
-          <div class="pv-parsons__mount"><noscript>This puzzle needs JavaScript.</noscript></div>
-          <script id="parsons-pythagorean-triples-finder" type="application/json">{"id": "pythagorean-triples-finder", "lines": [{"id": "pythagorean-triples-finder-0", "text": "limit = 20", "indent": 0, "distractor": false, "feedback": "Set the range limit at top level \u2014 no indentation."}, {"id": "pythagorean-triples-finder-1", "text": "triples = [", "indent": 0, "distractor": false, "feedback": "Start the list comprehension at top level \u2014 no indent."}, {"id": "pythagorean-triples-finder-2", "text": "    (a, b, c)", "indent": 0, "distractor": false, "feedback": "The output expression \u2014 what each element looks like."}, {"id": "pythagorean-triples-finder-3", "text": "    for a in range(1, limit + 1)", "indent": 0, "distractor": false, "feedback": "Outer loop over 'a' values."}, {"id": "pythagorean-triples-finder-4", "text": "    for b in range(a + 1, limit + 1)", "indent": 0, "distractor": false, "feedback": "Middle loop \u2014 b starts at a+1 to ensure a \u003C b."}, {"id": "pythagorean-triples-finder-5", "text": "    for c in range(b + 1, limit + 1)", "indent": 0, "distractor": false, "feedback": "Inner loop \u2014 c starts at b+1 to ensure b \u003C c."}, {"id": "pythagorean-triples-finder-6", "text": "    if a**2 + b**2 == c**2", "indent": 0, "distractor": false, "feedback": "The Pythagorean condition \u2014 the filter clause."}, {"id": "pythagorean-triples-finder-7", "text": "]", "indent": 0, "distractor": false, "feedback": "Close the list comprehension bracket."}, {"id": "pythagorean-triples-finder-8", "text": "for triple in triples:", "indent": 0, "distractor": false, "feedback": "Loop to print each triple \u2014 top level."}, {"id": "pythagorean-triples-finder-9", "text": "    print(triple)", "indent": 0, "distractor": false, "feedback": "Print inside the loop \u2014 already indented in the text, keep indent at 0."}, {"id": "pythagorean-triples-finder-10", "text": "    if a \u003C b \u003C c", "indent": 0, "distractor": true, "feedback": "The order is already enforced by range(a+1, ...) and range(b+1, ...) \u2014 this is redundant."}, {"id": "pythagorean-triples-finder-11", "text": "triples.sort()", "indent": 0, "distractor": true, "feedback": "The comprehension naturally produces sorted output \u2014 no explicit sort needed."}]}</script>
-        </article>
-      
+    
+    <div class="pv-parsons__mount">
+      <noscript>This puzzle needs JavaScript.</noscript>
+    </div>
+    <script id="parsons-pythagorean-triples-finder" type="application/json">{"id": "pythagorean-triples-finder", "lines": [{"id": "pythagorean-triples-finder-0", "text": "limit = 20", "indent": 0, "distractor": false, "feedback": "Set the range limit at top level \u2014 no indentation."}, {"id": "pythagorean-triples-finder-1", "text": "triples = [", "indent": 0, "distractor": false, "feedback": "Start the list comprehension at top level \u2014 no indent."}, {"id": "pythagorean-triples-finder-2", "text": "    (a, b, c)", "indent": 0, "distractor": false, "feedback": "The output expression \u2014 what each element looks like."}, {"id": "pythagorean-triples-finder-3", "text": "    for a in range(1, limit + 1)", "indent": 0, "distractor": false, "feedback": "Outer loop over 'a' values."}, {"id": "pythagorean-triples-finder-4", "text": "    for b in range(a + 1, limit + 1)", "indent": 0, "distractor": false, "feedback": "Middle loop \u2014 b starts at a+1 to ensure a \u003C b."}, {"id": "pythagorean-triples-finder-5", "text": "    for c in range(b + 1, limit + 1)", "indent": 0, "distractor": false, "feedback": "Inner loop \u2014 c starts at b+1 to ensure b \u003C c."}, {"id": "pythagorean-triples-finder-6", "text": "    if a**2 + b**2 == c**2", "indent": 0, "distractor": false, "feedback": "The Pythagorean condition \u2014 the filter clause."}, {"id": "pythagorean-triples-finder-7", "text": "]", "indent": 0, "distractor": false, "feedback": "Close the list comprehension bracket."}, {"id": "pythagorean-triples-finder-8", "text": "for triple in triples:", "indent": 0, "distractor": false, "feedback": "Loop to print each triple \u2014 top level."}, {"id": "pythagorean-triples-finder-9", "text": "    print(triple)", "indent": 0, "distractor": false, "feedback": "Print inside the loop \u2014 already indented in the text, keep indent at 0."}, {"id": "pythagorean-triples-finder-10", "text": "    if a \u003C b \u003C c", "indent": 0, "distractor": true, "feedback": "The order is already enforced by range(a+1, ...) and range(b+1, ...) \u2014 this is redundant."}, {"id": "pythagorean-triples-finder-11", "text": "triples.sort()", "indent": 0, "distractor": true, "feedback": "The comprehension naturally produces sorted output \u2014 no explicit sort needed."}]}</script>
+  </article>
+
 
       
     

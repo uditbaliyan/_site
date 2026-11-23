@@ -44,6 +44,7 @@
 
       <link href="../../static/css/project.css" rel="stylesheet" />
       <link href="../../static/css/pyverse-pop.css" rel="stylesheet" />
+      <link href="../../static/css/code-highlight.css" rel="stylesheet" />
     
     
   <link rel="stylesheet" href="../../static/css/practice-engine.css" />
@@ -243,7 +244,7 @@
         </div>
         <div class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card">
           <div class="font-mono text-[10px] uppercase tracking-[0.07em] text-muted mb-1.5">Problems</div>
-          <div class="font-mono text-[22px] font-bold text-ink" id="stat-total">3</div>
+          <div class="font-mono text-[22px] font-bold text-ink" id="stat-total">11</div>
           
           
           <div class="pe-bar">
@@ -259,7 +260,7 @@
       
       <div class="mt-9 mb-5 flex items-baseline gap-3.5">
         <h2 class="font-black text-[28px] tracking-tight">Problems</h2>
-        <span class="font-mono text-[13px] text-muted">03 loaded</span>
+        <span class="font-mono text-[13px] text-muted">11 loaded</span>
       </div>
       
         <p class="mb-5 max-w-[65ch] text-[13.5px] leading-relaxed text-body-txt">
@@ -298,6 +299,84 @@
                   <td class="px-3 py-2.5">
                     <a class="font-bold text-ink no-underline hover:text-red"
                        href="../../practice/problem/average-of-numbers/index.html">Average of Numbers</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="contains-duplicate"
+                    data-title="Contains Duplicate"
+                    data-difficulty="easy"
+                    data-topic="arrays-and-hashing">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/contains-duplicate/index.html">Contains Duplicate</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="majority-element"
+                    data-title="Majority Element"
+                    data-difficulty="easy"
+                    data-topic="arrays-and-hashing">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/majority-element/index.html">Majority Element</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="missing-number"
+                    data-title="Missing Number"
+                    data-difficulty="easy"
+                    data-topic="arrays-and-hashing">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/missing-number/index.html">Missing Number</a>
                   </td>
                   <td class="px-3 py-2.5">
                     <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
@@ -367,11 +446,141 @@
                   </td>
                 </tr>
               
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="valid-anagram"
+                    data-title="Valid Anagram"
+                    data-difficulty="easy"
+                    data-topic="arrays-and-hashing">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/valid-anagram/index.html">Valid Anagram</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="group-anagrams"
+                    data-title="Group Anagrams"
+                    data-difficulty="medium"
+                    data-topic="arrays-and-hashing">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/group-anagrams/index.html">Group Anagrams</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="longest-consecutive-sequence"
+                    data-title="Longest Consecutive Sequence"
+                    data-difficulty="medium"
+                    data-topic="arrays-and-hashing">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/longest-consecutive-sequence/index.html">Longest Consecutive Sequence</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="product-of-array-except-self"
+                    data-title="Product of Array Except Self"
+                    data-difficulty="medium"
+                    data-topic="arrays-and-hashing">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/product-of-array-except-self/index.html">Product of Array Except Self</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="top-k-frequent-elements"
+                    data-title="Top K Frequent Elements"
+                    data-difficulty="medium"
+                    data-topic="arrays-and-hashing">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/top-k-frequent-elements/index.html">Top K Frequent Elements</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/arrays-and-hashing/index.html">Arrays &amp; Hashing</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
             </tbody>
           </table>
         </div>
         <div class="mt-2.5 px-0.5 font-mono text-[11px] text-muted"
-             id="table-count">3 problems</div>
+             id="table-count">11 problems</div>
       
       
         <div class="mt-9 mb-5 flex items-baseline gap-3.5">
