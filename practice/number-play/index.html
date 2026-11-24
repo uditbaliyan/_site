@@ -1,0 +1,794 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Udit Baliyan" />
+    <link rel="icon" href="../../static/images/favicons/favicon.ico" />
+    
+      
+      <title>Number Play · PyVerse</title>
+      
+
+
+<meta name="description" content="PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER" />
+<link rel="canonical" href="https://pyverse.com/practice/number-play/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PyVerse" />
+<meta property="og:title" content="Number Play · PyVerse" />
+<meta property="og:description" content="PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER" />
+<meta property="og:url" content="https://pyverse.com/practice/number-play/" />
+
+<meta name="twitter:card"
+      content="summary" />
+<meta name="twitter:title" content="Number Play · PyVerse" />
+<meta name="twitter:description" content="PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER" />
+
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;700;900&family=Archivo:wdth,wght@62..125,400..900&display=swap"
+          rel="stylesheet" />
+    
+      
+
+<link rel="stylesheet" type="text/css" href="../../static/css/dist/styles.css">
+
+      <link href="../../static/css/project.css" rel="stylesheet" />
+      <link href="../../static/css/pyverse-pop.css" rel="stylesheet" />
+      <link href="../../static/css/code-highlight.css" rel="stylesheet" />
+    
+    
+  <link rel="stylesheet" href="../../static/css/practice-engine.css" />
+
+    
+      <script defer
+              src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      <script defer src="../../static/js/project.js"></script>
+      <script defer src="../../static/js/pyverse-pop.js"></script>
+    
+  </head>
+  <body class="flex min-h-screen flex-col bg-bg font-sans text-base leading-relaxed text-ink "
+         data-tree-key="track-number-play">
+    
+      <a href="#main"
+         class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-(--z-toast) focus:border-[3px] focus:border-ink focus:bg-bg focus:px-4 focus:py-3 focus:font-mono focus:text-sm focus:font-bold focus:text-ink">Skip to main content</a>
+      
+        
+
+
+<header class="sticky top-0 z-(--z-nav) border-b-[3px] border-ink bg-bg">
+  
+  <div class="pv-prog" aria-hidden="true">
+    <i class="pv-prog-fill"></i>
+  </div>
+  <div class="page-container flex h-(--nav-h) items-center justify-between gap-4">
+    <a href="../../index.html"
+       class="flex min-h-11 items-center gap-2 font-black text-xl tracking-tight text-ink no-underline">
+      
+      <span class="pv-wordmark">PYVERSE<i class="pv-sq" aria-hidden="true"></i></span>
+    </a>
+    <nav aria-label="Main" class="hidden items-center gap-1 lg:flex">
+      
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-1"
+   href="../../learn/index.html"
+   
+   >Learn</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2 nav-active"
+   href="../../practice/index.html"
+   
+   aria-current="page">Practice</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="../../practice/sheets/index.html"
+   
+   >Sheets</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-4"
+   href="../../python/index.html"
+   
+   >Blog</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-3"
+   href="../../labs/index.html"
+   
+   >Labs</a>
+<a class="inline-flex min-h-11 items-center whitespace-nowrap px-2.5 font-mono text-xs text-ink no-underline hover:bg-ink hover:text-bg nav-tone-5"
+   href="../../about/index.html"
+   
+   >About</a>
+
+
+      
+
+
+      
+        <a href="../../practice/index.html"
+           class="ml-1 inline-flex min-h-11 items-center whitespace-nowrap border-[3px] border-ink bg-red px-4 font-mono text-xs font-bold text-bg no-underline hover:bg-ink">START SESSION</a>
+      
+    </nav>
+    <details class="group lg:hidden"
+             x-data="{}"
+             @keydown.escape.window="if ($el.open) { $el.open = false; $refs.toggle.focus() }"
+             @click.outside="$el.open = false">
+      <summary x-ref="toggle"
+               class="flex h-11 w-11 cursor-pointer list-none items-center justify-center border-[3px] border-ink bg-bg text-ink hover:bg-ink hover:text-bg [&::-webkit-details-marker]:hidden">
+        <span class="sr-only">Menu</span>
+        <svg class="h-5 w-5 group-open:hidden"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2.5"
+             stroke-linecap="round"
+             aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="hidden h-5 w-5 group-open:block"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2.5"
+             stroke-linecap="round"
+             aria-hidden="true">
+          <path d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </summary>
+      <nav aria-label="Main"
+           class="absolute inset-x-0 top-full z-(--z-drawer) flex max-h-[calc(100dvh-var(--nav-h))] flex-col overflow-y-auto border-b-[3px] border-ink bg-bg px-4 py-3 shadow-card sm:px-7">
+        
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-1"
+   href="../../learn/index.html"
+   
+   >Learn</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2 nav-active"
+   href="../../practice/index.html"
+   
+   aria-current="page">Practice</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-2"
+   href="../../practice/sheets/index.html"
+   
+   >Sheets</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-4"
+   href="../../python/index.html"
+   
+   >Blog</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-3"
+   href="../../labs/index.html"
+   
+   >Labs</a>
+<a class="flex min-h-11 items-center border-b border-ink/10 px-1 font-mono text-[13px] text-ink no-underline hover:bg-ink hover:text-bg nav-tone-5"
+   href="../../about/index.html"
+   
+   >About</a>
+
+
+        
+
+
+        
+          <a href="../../practice/index.html"
+             class="mt-3 flex min-h-11 items-center justify-center border-[3px] border-ink bg-red px-4 font-mono text-[13px] font-bold text-bg no-underline hover:bg-ink">START SESSION</a>
+        
+      </nav>
+    </details>
+  </div>
+</header>
+
+      
+      <main id="main" tabindex="-1" class="focus:outline-none">
+        
+        
+          
+  
+  <div class="page-container pt-7 pb-[90px]">
+    
+
+
+
+
+  <nav aria-label="Breadcrumb" class="mb-4 font-mono text-xs text-muted">
+    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+      
+        
+      
+        
+      
+        
+          <li class="flex items-center gap-2">
+            <a href="../../index.html"
+               class="inline-flex min-h-11 items-center sm:min-h-6 text-body-txt underline underline-offset-4 hover:text-red">Home</a>
+            <span aria-hidden="true">/</span>
+          </li>
+        
+      
+        
+          <li class="flex items-center gap-2">
+            <a href="../../practice/index.html"
+               class="inline-flex min-h-11 items-center sm:min-h-6 text-body-txt underline underline-offset-4 hover:text-red">Practice</a>
+            <span aria-hidden="true">/</span>
+          </li>
+        
+      
+      
+        <li aria-current="page" class="font-bold text-ink">Number Play</li>
+      
+    </ol>
+  </nav>
+
+
+    <h1 class="mt-2 font-black text-[clamp(30px,5vw,56px)] leading-[0.98] tracking-tighter">Number Play</h1>
+    
+    <div class="mt-9 pe-engine pe-on-light bg-transparent text-ink min-h-0 [--bg0:#F5EEDA] [--bg1:#F5EEDA] [--bg2:#EDE6D2] [--bg3:#D6CEBD] [--bg4:#D6CEBD] [--border:rgba(26,26,26,0.15)] [--border-hi:#1A1A1A] [--text0:#1A1A1A] [--text1:#3A3529] [--text2:#6B6355] [--accent:#C62828] [--accent-dim:rgba(198,40,40,0.12)] [--green:#3D4F2F] [--green-dim:rgba(200,213,185,0.55)] [--red:#C62828] [--red-dim:rgba(198,40,40,0.12)] [--amber:#6B6355] [--amber-dim:rgba(214,206,189,0.7)] [--sans:Inter,system-ui,sans-serif] [--mono:'JetBrains_Mono',monospace]"
+         data-progress-scope>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-2.5 mb-[18px]">
+        <div class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card">
+          <div class="font-mono text-[10px] uppercase tracking-[0.07em] text-muted mb-1.5">Solved in this track</div>
+          <div class="font-mono text-[22px] font-bold text-screen-dk"
+               id="stat-solved">0</div>
+          <div class="font-mono text-[10.5px] text-muted mt-1">
+            <span id="stat-easy">0</span> easy ·
+            <span id="stat-medium">0</span> medium ·
+            <span id="stat-hard">0</span> hard
+          </div>
+        </div>
+        <div class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card">
+          <div class="font-mono text-[10px] uppercase tracking-[0.07em] text-muted mb-1.5">Attempted</div>
+          <div class="font-mono text-[22px] font-bold text-ink" id="stat-attempted">0</div>
+        </div>
+        <div class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card">
+          <div class="font-mono text-[10px] uppercase tracking-[0.07em] text-muted mb-1.5">Problems</div>
+          <div class="font-mono text-[22px] font-bold text-ink" id="stat-total">16</div>
+          
+          
+          <div class="pe-bar">
+            <span data-progress-bar style="width: 0%"></span>
+          </div>
+          
+        </div>
+        <div class="pv-tile bg-bg-2 border-[3px] border-ink p-[18px] shadow-card">
+          <div class="font-mono text-[10px] uppercase tracking-[0.07em] text-muted mb-1.5">Streak</div>
+          <div class="font-mono text-[22px] font-bold text-red" id="stat-streak">0</div>
+        </div>
+      </div>
+      
+      <div class="mt-9 mb-5 flex items-baseline gap-3.5">
+        <h2 class="font-black text-[28px] tracking-tight">Problems</h2>
+        <span class="font-mono text-[13px] text-muted">16 loaded</span>
+      </div>
+      
+        <p class="mb-5 max-w-[65ch] text-[13.5px] leading-relaxed text-body-txt">
+          Difficulty ascending by default — click a column to re-sort.
+        </p>
+        <div class="border-[3px] border-ink bg-bg-2 shadow-card overflow-hidden">
+          <table class="w-full border-collapse text-[13px] text-ink"
+                 data-practice-table
+                 data-default-sort="difficulty">
+            <thead>
+              <tr class="border-b-[3px] border-ink bg-device/40">
+                <th scope="col" class="px-3 py-2 text-left"><span class="pe-hidden">Status</span></th>
+                <th scope="col" class="px-3 py-2 text-left" data-sort="title">
+                  <button class="inline-flex min-h-11 items-center font-mono text-xs uppercase tracking-[1.5px] text-muted hover:text-ink cursor-pointer [[aria-sort]_&]:text-red"
+                          type="button">Title</button>
+                </th>
+                <th scope="col" class="px-3 py-2 text-left" data-sort="difficulty">
+                  <button class="inline-flex min-h-11 items-center font-mono text-xs uppercase tracking-[1.5px] text-muted hover:text-ink cursor-pointer [[aria-sort]_&]:text-red"
+                          type="button">Difficulty</button>
+                </th>
+                <th scope="col" class="px-3 py-2 text-left" data-sort="status">
+                  <button class="inline-flex min-h-11 items-center font-mono text-xs uppercase tracking-[1.5px] text-muted hover:text-ink cursor-pointer [[aria-sort]_&]:text-red"
+                          type="button">Status</button>
+                </th>
+                <th scope="col" class="px-3 py-2 text-left">Topic</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="count-digits-above-value"
+                    data-title="Count Digits Above a Value"
+                    data-difficulty="easy"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/count-digits-above-value/index.html">Count Digits Above a Value</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="digit-sum-of-product"
+                    data-title="Digit Sum of a Product"
+                    data-difficulty="easy"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/digit-sum-of-product/index.html">Digit Sum of a Product</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="digital-root"
+                    data-title="Digital Root"
+                    data-difficulty="easy"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/digital-root/index.html">Digital Root</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="perfect-squares-in-range"
+                    data-title="Perfect Squares in a Range"
+                    data-difficulty="easy"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/perfect-squares-in-range/index.html">Perfect Squares in a Range</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="sum-of-first-n-even-numbers"
+                    data-title="Sum of the First N Even Numbers"
+                    data-difficulty="easy"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/sum-of-first-n-even-numbers/index.html">Sum of the First N Even Numbers</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="sum-of-first-n-odd-numbers"
+                    data-title="Sum of the First N Odd Numbers"
+                    data-difficulty="easy"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/sum-of-first-n-odd-numbers/index.html">Sum of the First N Odd Numbers</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-easy !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Easy</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="count-good-numbers"
+                    data-title="Count Good Numbers"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/count-good-numbers/index.html">Count Good Numbers</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="count-perfect-numbers"
+                    data-title="Count Perfect Numbers"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/count-perfect-numbers/index.html">Count Perfect Numbers</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="divisors-of-a-product"
+                    data-title="Divisors of a Product"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/divisors-of-a-product/index.html">Divisors of a Product</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="gcd-of-a-list"
+                    data-title="GCD of a List"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/gcd-of-a-list/index.html">GCD of a List</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="harmonic-series-sum"
+                    data-title="Harmonic Series Sum"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/harmonic-series-sum/index.html">Harmonic Series Sum</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="largest-prime-factor"
+                    data-title="Largest Prime Factor"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/largest-prime-factor/index.html">Largest Prime Factor</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="palindromic-numbers-in-range"
+                    data-title="Palindromic Numbers in a Range"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/palindromic-numbers-in-range/index.html">Palindromic Numbers in a Range</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="sum-of-even-squares"
+                    data-title="Sum of Even Squares"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/sum-of-even-squares/index.html">Sum of Even Squares</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="sum-of-first-n-fibonacci"
+                    data-title="Sum of the First N Fibonacci Numbers"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/sum-of-first-n-fibonacci/index.html">Sum of the First N Fibonacci Numbers</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+                <tr class="border-b border-ink/20 last:border-b-0 hover:bg-bg transition-colors"
+                    data-slug="sum-of-first-n-primes"
+                    data-title="Sum of the First N Primes"
+                    data-difficulty="medium"
+                    data-topic="number-play">
+                  <td class="pe-status text-center" data-status-icon data-status="todo">○</td>
+                  <td class="px-3 py-2.5">
+                    <a class="font-bold text-ink no-underline hover:text-red"
+                       href="../../practice/problem/sum-of-first-n-primes/index.html">Sum of the First N Primes</a>
+                  </td>
+                  <td class="px-3 py-2.5">
+                    <span class="pe-badge diff-medium !border-ink rounded-none border px-2 py-[3px] font-mono text-[10.5px] uppercase tracking-wide">Medium</span>
+                  </td>
+                  <td class="px-3 py-2.5 font-mono text-[11.5px] text-muted"
+                      data-status-label
+                      data-status="todo">unsolved</td>
+                  <td class="px-3 py-2.5">
+                    <div class="flex flex-wrap gap-1.5">
+                      
+                        <a class="border border-ink/30 px-1.5 py-[3px] font-mono text-[10.5px] no-underline hover:border-ink hover:text-red"
+                           href="../../practice/number-play/index.html">Number Play</a>
+                      
+                    </div>
+                  </td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-2.5 px-0.5 font-mono text-[11px] text-muted"
+             id="table-count">16 problems</div>
+      
+      
+    </div>
+  </div>
+
+
+        
+      </main>
+      
+        
+
+
+<footer class="mt-auto border-t-[3px] border-ink bg-bg">
+  <div class="page-container pt-7 pb-8">
+    
+    <div class="flex flex-wrap justify-between gap-10 mb-7">
+      <div class="max-w-[240px]">
+        <div class="font-black text-[18px] tracking-tight mb-2">
+          <span class="pv-wordmark">PYVERSE<i class="pv-sq" aria-hidden="true"></i></span>
+        </div>
+        <p class="font-mono text-xs text-muted leading-relaxed">PYVERSE · ALL EXERCISES RUN IN YOUR BROWSER</p>
+      </div>
+      
+      
+    </div>
+    
+    <div class="border-t-[3px] border-ink pt-4 flex justify-between items-center flex-wrap gap-3 font-mono text-xs text-muted">
+      <span>NO SERVER, NO WAIT</span>
+      <div class="flex gap-4 items-center">
+        
+          <a href="https://github.com/uditbaliyan/pyverse"
+             target="_blank"
+             rel="noopener"
+             aria-label="GitHub"
+             class="inline-flex h-11 w-11 items-center justify-center text-muted hover:text-ink transition-colors">
+            <svg width="18"
+                 height="18"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2.5"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+      
+    
+    
+    
+    
+  <script src="../../static/js/pyverse-progress.js"></script>
+  <script src="../../static/js/practice-browse.js"></script>
+  <script>
+    document.querySelectorAll("[data-practice-table] tbody tr[data-slug]").forEach((row) => {
+      const label = row.querySelector("[data-status-label]");
+      if (!label) return;
+      new MutationObserver(() => {
+        label.textContent =
+          row.dataset.status === "solved" ?
+          "solved" :
+          row.dataset.status === "attempted" ?
+          "attempted" :
+          "unsolved";
+      }).observe(row, {
+        attributes: true,
+        attributeFilter: ["data-status"]
+      });
+    });
+  </script>
+
+    
+    
+  </body>
+</html>
